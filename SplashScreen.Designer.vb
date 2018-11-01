@@ -22,8 +22,13 @@ Partial Class frmSplashScreen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSplashScreen))
+        Me.TimerSplashScreen = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
+        '
+        'TimerSplashScreen
+        '
         '
         'frmSplashScreen
         '
@@ -35,9 +40,10 @@ Partial Class frmSplashScreen
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmSplashScreen"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SplashScreen"
         Me.ResumeLayout(False)
 
     End Sub
-
+    Friend WithEvents TimerSplashScreen As Timer
 End Class
