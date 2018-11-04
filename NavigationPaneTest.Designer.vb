@@ -22,6 +22,7 @@ Partial Class NavigationPaneTest
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnReturn = New System.Windows.Forms.Button()
         Me.btnPlaceHolder1 = New System.Windows.Forms.Button()
@@ -32,9 +33,10 @@ Partial Class NavigationPaneTest
         Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.tpReturn = New System.Windows.Forms.TabPage()
+        Me.tpRent = New System.Windows.Forms.TabPage()
         Me.tcTabNavContainer = New System.Windows.Forms.TabControl()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Panel1.SuspendLayout()
         Me.msTopMainMenu.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -59,6 +61,7 @@ Partial Class NavigationPaneTest
         Me.btnReturn.BackColor = System.Drawing.SystemColors.WindowFrame
         Me.btnReturn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
         Me.btnReturn.FlatAppearance.BorderSize = 0
+        Me.btnReturn.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.WindowFrame
         Me.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReturn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -75,6 +78,7 @@ Partial Class NavigationPaneTest
         Me.btnPlaceHolder1.BackColor = System.Drawing.SystemColors.WindowFrame
         Me.btnPlaceHolder1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
         Me.btnPlaceHolder1.FlatAppearance.BorderSize = 0
+        Me.btnPlaceHolder1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.WindowFrame
         Me.btnPlaceHolder1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnPlaceHolder1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPlaceHolder1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -91,6 +95,7 @@ Partial Class NavigationPaneTest
         Me.btnRent.BackColor = System.Drawing.SystemColors.WindowFrame
         Me.btnRent.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
         Me.btnRent.FlatAppearance.BorderSize = 0
+        Me.btnRent.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.WindowFrame
         Me.btnRent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnRent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRent.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -135,11 +140,11 @@ Partial Class NavigationPaneTest
         '
         'TabPage3
         '
-        Me.TabPage3.BackColor = System.Drawing.Color.Gray
+        Me.TabPage3.BackColor = System.Drawing.Color.White
         Me.TabPage3.Controls.Add(Me.Label1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(0)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(869, 578)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "TabPage3"
@@ -147,51 +152,61 @@ Partial Class NavigationPaneTest
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(238, 108)
+        Me.Label1.Location = New System.Drawing.Point(235, 105)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(47, 13)
+        Me.Label1.Size = New System.Drawing.Size(62, 19)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "It works!"
         '
-        'TabPage2
+        'tpReturn
         '
-        Me.TabPage2.BackColor = System.Drawing.SystemColors.ButtonShadow
-        Me.TabPage2.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(869, 578)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
+        Me.tpReturn.BackColor = System.Drawing.Color.White
+        Me.tpReturn.Location = New System.Drawing.Point(4, 24)
+        Me.tpReturn.Name = "tpReturn"
+        Me.tpReturn.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpReturn.Size = New System.Drawing.Size(869, 578)
+        Me.tpReturn.TabIndex = 1
+        Me.tpReturn.Text = "Return"
         '
-        'TabPage1
+        'tpRent
         '
-        Me.TabPage1.BackColor = System.Drawing.Color.Gainsboro
-        Me.TabPage1.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(869, 578)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
+        Me.tpRent.BackColor = System.Drawing.Color.White
+        Me.tpRent.Location = New System.Drawing.Point(4, 24)
+        Me.tpRent.Name = "tpRent"
+        Me.tpRent.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpRent.Size = New System.Drawing.Size(869, 578)
+        Me.tpRent.TabIndex = 0
+        Me.tpRent.Text = "Rent"
         '
         'tcTabNavContainer
         '
-        Me.tcTabNavContainer.Controls.Add(Me.TabPage1)
-        Me.tcTabNavContainer.Controls.Add(Me.TabPage2)
+        Me.tcTabNavContainer.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
+        Me.tcTabNavContainer.Controls.Add(Me.tpRent)
+        Me.tcTabNavContainer.Controls.Add(Me.tpReturn)
         Me.tcTabNavContainer.Controls.Add(Me.TabPage3)
         Me.tcTabNavContainer.Dock = System.Windows.Forms.DockStyle.Right
-        Me.tcTabNavContainer.ItemSize = New System.Drawing.Size(60, 20)
+        Me.tcTabNavContainer.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.tcTabNavContainer.ItemSize = New System.Drawing.Size(0, 20)
         Me.tcTabNavContainer.Location = New System.Drawing.Point(146, 24)
         Me.tcTabNavContainer.Margin = New System.Windows.Forms.Padding(0)
+        Me.tcTabNavContainer.Multiline = True
         Me.tcTabNavContainer.Name = "tcTabNavContainer"
         Me.tcTabNavContainer.Padding = New System.Drawing.Point(0, 0)
         Me.tcTabNavContainer.SelectedIndex = 0
         Me.tcTabNavContainer.Size = New System.Drawing.Size(877, 606)
         Me.tcTabNavContainer.TabIndex = 0
         '
+        'ImageList1
+        '
+        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
+        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        '
         'NavigationPaneTest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1023, 630)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tcTabNavContainer)
@@ -221,8 +236,9 @@ Partial Class NavigationPaneTest
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents Label1 As Label
-    Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents tpReturn As TabPage
+    Friend WithEvents tpRent As TabPage
     Friend WithEvents tcTabNavContainer As TabControl
     Friend WithEvents LogOutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ImageList1 As ImageList
 End Class
