@@ -1,7 +1,7 @@
-﻿Public Class NavigationPaneTest
+﻿Public Class frmNavigationPaneTest
     Private Sub LogOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogOutToolStripMenuItem.Click
         Me.Close() 'Close application
-        LoginScreen.Show() 'Open login screen
+        frmLoginScreen.Show() 'Open login screen
     End Sub
 
     Private Sub btnRent_Click(sender As Object, e As EventArgs) Handles btnRent.Click
@@ -30,15 +30,22 @@
         Application.Exit()  'Close application
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
+    Private Sub frmNavigationPaneTest_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        frmLoginScreen.Show()
+        Me.Hide()
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        Dim result As Integer = MsgBox("Exit Application?", MsgBoxStyle.YesNo) 'Exit confirmation dialog
 
-    End Sub
+        If result = DialogResult.No Then
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+        ElseIf result = DialogResult.Yes Then
+            frmLoginScreen.Show() 'Open login dialog
+            Me.Hide()
+
+        End If
+
 
     End Sub
 End Class

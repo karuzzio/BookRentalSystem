@@ -10,5 +10,5 @@ C:\Users\User\OneDrive - Asia Pacific University\Modules\[3] IVP\Assignment\_wor
 C:\Users\User\OneDrive - Asia Pacific University\Modules\[3] IVP\Assignment\_workfiles\BookRentalSystem\BookRentalSystem\obj\Debug\BookRentalSystem.exe
 C:\Users\User\OneDrive - Asia Pacific University\Modules\[3] IVP\Assignment\_workfiles\BookRentalSystem\BookRentalSystem\obj\Debug\BookRentalSystem.xml
 C:\Users\User\OneDrive - Asia Pacific University\Modules\[3] IVP\Assignment\_workfiles\BookRentalSystem\BookRentalSystem\obj\Debug\BookRentalSystem.pdb
-C:\Users\User\OneDrive - Asia Pacific University\Modules\[3] IVP\Assignment\_workfiles\BookRentalSystem\BookRentalSystem\obj\Debug\BookRentalSystem.LoginScreen.resources
-C:\Users\User\OneDrive - Asia Pacific University\Modules\[3] IVP\Assignment\_workfiles\BookRentalSystem\BookRentalSystem\obj\Debug\BookRentalSystem.NavigationPaneTest.resources
+C:\Users\User\OneDrive - Asia Pacific University\Modules\[3] IVP\Assignment\_workfiles\BookRentalSystem\BookRentalSystem\obj\Debug\BookRentalSystem.frmLoginScreen.resources
+C:\Users\User\OneDrive - Asia Pacific University\Modules\[3] IVP\Assignment\_workfiles\BookRentalSystem\BookRentalSystem\obj\Debug\BookRentalSystem.frmNavigationPaneTest.resources
