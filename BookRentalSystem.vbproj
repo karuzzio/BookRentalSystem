@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBook.Designer.vb">
+      <DependentUpon>AddBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="LoginScreen.Designer.vb">
       <DependentUpon>LoginScreen.vb</DependentUpon>
@@ -110,6 +116,9 @@
     <Compile Include="UserAdminModule.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddBook.resx">
+      <DependentUpon>AddBook.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.vb</DependentUpon>
     </EmbeddedResource>
