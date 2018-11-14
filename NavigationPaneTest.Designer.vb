@@ -76,7 +76,7 @@ Partial Class frmNavigationPaneTest
         Me.Label10 = New System.Windows.Forms.Label()
         Me.tpRent = New System.Windows.Forms.TabPage()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.dgvBookRentList = New System.Windows.Forms.DataGridView()
+        Me.dgvBookRentList_A = New System.Windows.Forms.DataGridView()
         Me.IDNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BookTitle = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BookAuthor = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -128,7 +128,7 @@ Partial Class frmNavigationPaneTest
         Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView12 = New System.Windows.Forms.DataGridView()
+        Me.dgvBookRentList_B = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -145,7 +145,8 @@ Partial Class frmNavigationPaneTest
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.btnSaveGridData = New System.Windows.Forms.Button()
-        Me.btnLoadGridData = New System.Windows.Forms.Button()
+        Me.btnLoadGridDataA = New System.Windows.Forms.Button()
+        Me.btnLoadGridDataB = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.msTopMainMenu.SuspendLayout()
         Me.tpAddBook.SuspendLayout()
@@ -156,14 +157,14 @@ Partial Class frmNavigationPaneTest
         Me.GroupBox3.SuspendLayout()
         Me.tpRent.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
-        CType(Me.dgvBookRentList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvBookRentList_A, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.tcTabNavContainer.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
-        CType(Me.DataGridView12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvBookRentList_B, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -545,6 +546,7 @@ Partial Class frmNavigationPaneTest
         'tpReturn
         '
         Me.tpReturn.BackColor = System.Drawing.Color.White
+        Me.tpReturn.Controls.Add(Me.btnLoadGridDataB)
         Me.tpReturn.Controls.Add(Me.btnReturnBook)
         Me.tpReturn.Controls.Add(Me.GroupBox8)
         Me.tpReturn.Controls.Add(Me.GroupBox5)
@@ -781,7 +783,7 @@ Partial Class frmNavigationPaneTest
         'tpRent
         '
         Me.tpRent.BackColor = System.Drawing.SystemColors.Window
-        Me.tpRent.Controls.Add(Me.btnLoadGridData)
+        Me.tpRent.Controls.Add(Me.btnLoadGridDataA)
         Me.tpRent.Controls.Add(Me.btnSaveGridData)
         Me.tpRent.Controls.Add(Me.GroupBox6)
         Me.tpRent.Controls.Add(Me.GroupBox4)
@@ -796,26 +798,26 @@ Partial Class frmNavigationPaneTest
         '
         'GroupBox6
         '
-        Me.GroupBox6.Controls.Add(Me.dgvBookRentList)
+        Me.GroupBox6.Controls.Add(Me.dgvBookRentList_A)
         Me.GroupBox6.Location = New System.Drawing.Point(25, 284)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(963, 310)
         Me.GroupBox6.TabIndex = 10
         Me.GroupBox6.TabStop = False
         '
-        'dgvBookRentList
+        'dgvBookRentList_A
         '
-        Me.dgvBookRentList.BackgroundColor = System.Drawing.Color.White
-        Me.dgvBookRentList.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvBookRentList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgvBookRentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvBookRentList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDNumber, Me.BookTitle, Me.BookAuthor, Me.BookYear, Me.StudentName, Me.AdmissionNum, Me.RentDate, Me.DueDate, Me.PendingFine, Me.RemoveBook})
-        Me.dgvBookRentList.GridColor = System.Drawing.SystemColors.ControlLight
-        Me.dgvBookRentList.Location = New System.Drawing.Point(6, 13)
-        Me.dgvBookRentList.Name = "dgvBookRentList"
-        Me.dgvBookRentList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgvBookRentList.Size = New System.Drawing.Size(948, 291)
-        Me.dgvBookRentList.TabIndex = 7
+        Me.dgvBookRentList_A.BackgroundColor = System.Drawing.Color.White
+        Me.dgvBookRentList_A.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvBookRentList_A.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvBookRentList_A.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvBookRentList_A.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDNumber, Me.BookTitle, Me.BookAuthor, Me.BookYear, Me.StudentName, Me.AdmissionNum, Me.RentDate, Me.DueDate, Me.PendingFine, Me.RemoveBook})
+        Me.dgvBookRentList_A.GridColor = System.Drawing.SystemColors.ControlLight
+        Me.dgvBookRentList_A.Location = New System.Drawing.Point(6, 13)
+        Me.dgvBookRentList_A.Name = "dgvBookRentList_A"
+        Me.dgvBookRentList_A.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvBookRentList_A.Size = New System.Drawing.Size(948, 291)
+        Me.dgvBookRentList_A.TabIndex = 7
         '
         'IDNumber
         '
@@ -1329,26 +1331,27 @@ Partial Class frmNavigationPaneTest
         '
         'GroupBox8
         '
-        Me.GroupBox8.Controls.Add(Me.DataGridView12)
+        Me.GroupBox8.Controls.Add(Me.dgvBookRentList_B)
         Me.GroupBox8.Location = New System.Drawing.Point(26, 265)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(962, 329)
         Me.GroupBox8.TabIndex = 11
         Me.GroupBox8.TabStop = False
+        Me.GroupBox8.Text = "Return List"
         '
-        'DataGridView12
+        'dgvBookRentList_B
         '
-        Me.DataGridView12.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView12.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView12.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.DataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView12.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewButtonColumn1})
-        Me.DataGridView12.GridColor = System.Drawing.SystemColors.ControlLight
-        Me.DataGridView12.Location = New System.Drawing.Point(6, 13)
-        Me.DataGridView12.Name = "DataGridView12"
-        Me.DataGridView12.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.DataGridView12.Size = New System.Drawing.Size(948, 291)
-        Me.DataGridView12.TabIndex = 7
+        Me.dgvBookRentList_B.BackgroundColor = System.Drawing.Color.White
+        Me.dgvBookRentList_B.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvBookRentList_B.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvBookRentList_B.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvBookRentList_B.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewButtonColumn1})
+        Me.dgvBookRentList_B.GridColor = System.Drawing.SystemColors.ControlLight
+        Me.dgvBookRentList_B.Location = New System.Drawing.Point(8, 24)
+        Me.dgvBookRentList_B.Name = "dgvBookRentList_B"
+        Me.dgvBookRentList_B.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvBookRentList_B.Size = New System.Drawing.Size(948, 291)
+        Me.dgvBookRentList_B.TabIndex = 7
         '
         'DataGridViewTextBoxColumn1
         '
@@ -1410,7 +1413,8 @@ Partial Class frmNavigationPaneTest
         'btnReturnBook
         '
         Me.btnReturnBook.BackColor = System.Drawing.Color.DimGray
-        Me.btnReturnBook.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnReturnBook.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnReturnBook.FlatAppearance.BorderSize = 0
         Me.btnReturnBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
         Me.btnReturnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReturnBook.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1466,21 +1470,37 @@ Partial Class frmNavigationPaneTest
         '
         'btnSaveGridData
         '
+        Me.btnSaveGridData.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnSaveGridData.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnSaveGridData.Location = New System.Drawing.Point(857, 34)
         Me.btnSaveGridData.Name = "btnSaveGridData"
-        Me.btnSaveGridData.Size = New System.Drawing.Size(75, 23)
+        Me.btnSaveGridData.Size = New System.Drawing.Size(75, 32)
         Me.btnSaveGridData.TabIndex = 11
         Me.btnSaveGridData.Text = "Save"
-        Me.btnSaveGridData.UseVisualStyleBackColor = True
+        Me.btnSaveGridData.UseVisualStyleBackColor = False
         '
-        'btnLoadGridData
+        'btnLoadGridDataA
         '
-        Me.btnLoadGridData.Location = New System.Drawing.Point(857, 68)
-        Me.btnLoadGridData.Name = "btnLoadGridData"
-        Me.btnLoadGridData.Size = New System.Drawing.Size(75, 23)
-        Me.btnLoadGridData.TabIndex = 11
-        Me.btnLoadGridData.Text = "Load"
-        Me.btnLoadGridData.UseVisualStyleBackColor = True
+        Me.btnLoadGridDataA.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnLoadGridDataA.FlatAppearance.BorderSize = 3
+        Me.btnLoadGridDataA.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnLoadGridDataA.Location = New System.Drawing.Point(857, 68)
+        Me.btnLoadGridDataA.Name = "btnLoadGridDataA"
+        Me.btnLoadGridDataA.Size = New System.Drawing.Size(75, 32)
+        Me.btnLoadGridDataA.TabIndex = 11
+        Me.btnLoadGridDataA.Text = "Load"
+        Me.btnLoadGridDataA.UseVisualStyleBackColor = False
+        '
+        'btnLoadGridDataB
+        '
+        Me.btnLoadGridDataB.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnLoadGridDataB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnLoadGridDataB.Location = New System.Drawing.Point(857, 42)
+        Me.btnLoadGridDataB.Name = "btnLoadGridDataB"
+        Me.btnLoadGridDataB.Size = New System.Drawing.Size(75, 32)
+        Me.btnLoadGridDataB.TabIndex = 16
+        Me.btnLoadGridDataB.Text = "Load"
+        Me.btnLoadGridDataB.UseVisualStyleBackColor = False
         '
         'frmNavigationPaneTest
         '
@@ -1513,7 +1533,7 @@ Partial Class frmNavigationPaneTest
         Me.GroupBox3.PerformLayout()
         Me.tpRent.ResumeLayout(False)
         Me.GroupBox6.ResumeLayout(False)
-        CType(Me.dgvBookRentList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvBookRentList_A, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -1524,7 +1544,7 @@ Partial Class frmNavigationPaneTest
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.GroupBox8.ResumeLayout(False)
-        CType(Me.DataGridView12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvBookRentList_B, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1595,7 +1615,7 @@ Partial Class frmNavigationPaneTest
     Friend WithEvents BookManagementToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddBookToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GroupBox6 As GroupBox
-    Friend WithEvents dgvBookRentList As DataGridView
+    Friend WithEvents dgvBookRentList_A As DataGridView
     Friend WithEvents GroupBox7 As GroupBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label1 As Label
@@ -1633,7 +1653,7 @@ Partial Class frmNavigationPaneTest
     Friend WithEvents RemoveBook As DataGridViewButtonColumn
     Friend WithEvents txtAdmissionNum As MaskedTextBox
     Friend WithEvents GroupBox8 As GroupBox
-    Friend WithEvents DataGridView12 As DataGridView
+    Friend WithEvents dgvBookRentList_B As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
@@ -1649,6 +1669,7 @@ Partial Class frmNavigationPaneTest
     Friend WithEvents txtReturnBookTitle As TextBox
     Friend WithEvents Label26 As Label
     Friend WithEvents Label27 As Label
-    Friend WithEvents btnLoadGridData As Button
     Friend WithEvents btnSaveGridData As Button
+    Friend WithEvents btnLoadGridDataB As Button
+    Friend WithEvents btnLoadGridDataA As Button
 End Class
