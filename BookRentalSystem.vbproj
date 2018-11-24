@@ -85,10 +85,10 @@
     <Compile Include="LoginScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NavigationPaneTest.Designer.vb">
-      <DependentUpon>NavigationPaneTest.vb</DependentUpon>
+    <Compile Include="Main Window.Designer.vb">
+      <DependentUpon>Main Window.vb</DependentUpon>
     </Compile>
-    <Compile Include="NavigationPaneTest.vb">
+    <Compile Include="Main Window.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SplashScreen.vb">
@@ -122,8 +122,8 @@
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NavigationPaneTest.resx">
-      <DependentUpon>NavigationPaneTest.vb</DependentUpon>
+    <EmbeddedResource Include="Main Window.resx">
+      <DependentUpon>Main Window.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>

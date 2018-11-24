@@ -40,11 +40,11 @@ Partial Class frmLoginScreen
         '
         Me.lblUsername.AutoSize = True
         Me.lblUsername.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUsername.Location = New System.Drawing.Point(54, 109)
+        Me.lblUsername.Location = New System.Drawing.Point(56, 112)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(74, 17)
+        Me.lblUsername.Size = New System.Drawing.Size(57, 17)
         Me.lblUsername.TabIndex = 0
-        Me.lblUsername.Text = "Username :"
+        Me.lblUsername.Text = "Staff ID :"
         '
         'lblPassword
         '

@@ -49,8 +49,8 @@ Public Class frmLoginScreen
 
             Dim userTypeText As String = cbUserType.Text
 
-            frmNavigationPaneTest.btnLogout.Text = userTypeText & " - Logout" 'Change button text
-            frmNavigationPaneTest.Show() 'Open Application
+            frmMainAppWindow.btnLogout.Text = userTypeText & " - Logout" 'Change button text
+            frmMainAppWindow.Show() 'Open Application
             Me.Hide() 'Hide login form
             cbUserType.ResetText() 'Clear usetypeComboBox
             txtUsername.Clear() 'Clears Textbox
