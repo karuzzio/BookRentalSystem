@@ -7,6 +7,7 @@ Public Class frmMainAppWindow
 
     Dim totalPrice As New List(Of Double) 'Declare list for use in rent price calculation
     Dim totalPaid As New List(Of Double) 'Declare list for use in total paid calculation
+    Dim totalFine As New List(Of Double) 'Decalre list for use in total fine calculation
 
     'Form load event
     Private Sub NavigationPaneTest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -42,10 +43,10 @@ Public Class frmMainAppWindow
 
     Private Sub btnReturn_Click(sender As Object, e As EventArgs) Handles btnReturn.Click
         LoadGridData(dgvBookRentList_B, ThisFilename) 'loads data from file into DataGridView
+        dtpReturnDate.Value = Now 'set retun date to current date
 
         tcTabNavContainer.Visible = True 'Show tcTabNavContainer
         tcTabNavContainer.SelectedTab = tpReturn 'Show Return Tab
-        btnReturn.BackColor = Color.DimGray
 
     End Sub
 
@@ -157,8 +158,13 @@ Public Class frmMainAppWindow
         newDataRow.Cells(7).Value = dtpRentDate.Text
         newDataRow.Cells(8).Value = dtpDueDate.Text
 
-        'update item at chose idex in list
-        totalPrice(entryIndex) = cboRentPrice.SelectedValue
+        Try
+            'update item at chose idex in list
+            totalPrice(entryIndex) = cboRentPrice.SelectedValue
+        Catch ex As Exception
+            MsgBox("Could not update transaction list")
+        End Try
+
         'calculate sum of list and update label
         lblTotalBill.Text = "RM " + totalPrice.Sum.ToString + ".00"
         'Update number of items
@@ -168,30 +174,13 @@ Public Class frmMainAppWindow
 
     End Sub
 
-    Private Sub btnReturnBook_Click(sender As Object, e As EventArgs) Handles btnReturnBook.Click
-        'Attempt at textbox search
-        Dim temp As Integer = 0
-        For i As Integer = 0 To dgvBookRentList_A.RowCount - 1
-            For j As Integer = 0 To dgvBookRentList_A.ColumnCount - 1
-                If dgvBookRentList_A.Rows(i).Cells(j).Value.ToString = txtReturnBookID.Text Then
-                    MsgBox("Item found")
-                    temp = 1
-                End If
-            Next
-        Next
-        If temp = 0 Then
-            MsgBox("Item not found")
-        End If
-
-    End Sub
-
     '-----------------------------------------------------------------------------------------------------------
 
-    Private Sub btnSaveGridData_Click(sender As Object, e As EventArgs) 
+    Private Sub btnSaveGridData_Click(sender As Object, e As EventArgs)
         SaveGridData(dgvBookRentList_A, ThisFilename) 'loads data from file
     End Sub
 
-    Private Sub btnLoadGridData_Click(sender As Object, e As EventArgs) 
+    Private Sub btnLoadGridData_Click(sender As Object, e As EventArgs)
         LoadGridData(dgvBookRentList_A, ThisFilename) 'loads data from file
     End Sub
 
@@ -211,7 +200,7 @@ Public Class frmMainAppWindow
         Next
     End Sub
 
-    Private Sub btnLoadGridDataB_Click(sender As Object, e As EventArgs) 
+    Private Sub btnLoadGridDataB_Click(sender As Object, e As EventArgs)
         LoadGridData(dgvBookRentList_B, ThisFilename) 'loads data from file
     End Sub
 
@@ -305,5 +294,56 @@ Public Class frmMainAppWindow
 
     Private Sub SaveDataToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveDataToolStripMenuItem.Click
         SaveGridData(dgvBookRentList_A, ThisFilename) 'saves data to file
+    End Sub
+
+    Private Sub dgvBookRentListB_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBookRentList_B.CellContentClick, dgvBookRentList_B.CellClick, dgvBookRentList_B.CellMouseClick
+        'Row entry shows in textboxes upon clicking
+        entryIndex = e.RowIndex
+        Dim selectedRowB As DataGridViewRow
+        Try
+            selectedRowB = dgvBookRentList_B.Rows(entryIndex)
+
+            'Change Textbox and dates based on selected row
+            txtReturnBookID.Text = selectedRowB.Cells(0).Value.ToString
+            txtReturnBookTitle.Text = selectedRowB.Cells(1).Value.ToString
+            txtReturnCustomerName.Text = selectedRowB.Cells(4).Value.ToString
+            txtReturnCustomerNum.Text = selectedRowB.Cells(5).Value.ToString
+            dtpReturnRentDate.Text = selectedRowB.Cells(7).Value.ToString
+            dtpReturnDueDate.Text = selectedRowB.Cells(8).Value.ToString
+        Catch ex As Exception
+            'Ignore because user clicked on cell grids
+        End Try
+
+
+
+        'Calculate fines upon cell click, if any
+        Dim overdueDays As Long = DateDiff(DateInterval.Day, dtpDueDate.Value, dtpReturnDate.Value) 'Find difference in dates
+        Dim currentFine As Long = (overdueDays * 1)
+
+        If overdueDays <= 0 Then
+            lblDaysOverdue.Text = "0 Days"
+            gbFine.BackColor = Color.Honeydew
+        Else
+            gbFine.BackColor = Color.MistyRose
+            lblDaysOverdue.Text = overdueDays.ToString + " Days"
+            lblSelectedFine.Text = "RM " + currentFine.ToString("N2")
+        End If
+
+    End Sub
+
+
+
+    Private Sub btnReturnBook_Click(sender As Object, e As EventArgs) Handles btnReturnBook.Click
+        Dim overdueDays As Long = DateDiff(DateInterval.Day, dtpDueDate.Value, dtpReturnDate.Value) 'Find difference in dates
+        Dim currentFine As Long = (overdueDays * 1) 'calculate fine due for current selection
+
+        totalFine.Add(CDbl(currentFine)) 'Cast to double and add current fine to list
+
+        lblTotalFine.Text = "RM " + totalFine.Sum.ToString("N2") 'calculate sum of list and update label
+
+        dgvBookRentList_B.Rows.RemoveAt(entryIndex) 'Remove selected entry in datagridview
+
+        SaveGridData(dgvBookRentList_B, ThisFilename) 'save datagridview to file
+
     End Sub
 End Class
