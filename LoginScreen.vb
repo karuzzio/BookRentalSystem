@@ -1,9 +1,6 @@
 ﻿Imports System.Data.OleDb
 
 Public Class frmLoginScreen
-    Private Sub lblClose_Click(sender As Object, e As EventArgs) Handles lblClose.Click
-        Me.Close() 'Close login window
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
@@ -62,11 +59,6 @@ Public Class frmLoginScreen
 
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        Application.Exit()
-
-    End Sub
-
     Private Sub frmLoginScreen_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Application.Exit()
 
@@ -106,4 +98,10 @@ Public Class frmLoginScreen
         txtUsername.Text = cbUserType.Text '
 
     End Sub
+
+    Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
+        Application.Exit()
+    End Sub
+
+
 End Class

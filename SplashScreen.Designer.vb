@@ -23,7 +23,6 @@ Partial Class frmSplashScreen
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSplashScreen))
         Me.TimerSplashScreen = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
@@ -34,9 +33,9 @@ Partial Class frmSplashScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImage = Global.BookRentalSystem.My.Resources.Resources.Artboard_11
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(496, 302)
+        Me.ClientSize = New System.Drawing.Size(581, 367)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmSplashScreen"

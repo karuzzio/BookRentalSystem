@@ -68,16 +68,22 @@
     End Sub
 
     Private Sub btnReturn_Click(sender As Object, e As EventArgs) Handles btnReturn.Click
-        LoadGridData(dgvBookRentList_B, ThisFilename) 'loads data from file into DataGridView
-        dtpReturnDate.Value = Now 'set retun date to current date
 
-        btnReturnCheckout.Enabled = False 'Disable check out button until fines are detected
-        btnReturnCheckout.BackColor = Color.LightGray
-        tcTabNavContainer.Visible = True 'Show tcTabNavContainer
-        tcTabNavContainer.SelectedTab = tpReturn 'Show Return Tab
+        Try
+            LoadGridData(dgvBookRentList_B, ThisFilename) 'loads data from file into DataGridView
+            dtpReturnDate.Value = Now 'set retun date to current date
 
-        gbFine.BackColor = Color.White
-        lstReturnCartList.BackColor = Color.White
+            btnReturnCheckout.Enabled = False 'Disable check out button until fines are detected
+            btnReturnCheckout.BackColor = Color.LightGray
+            tcTabNavContainer.Visible = True 'Show tcTabNavContainer
+            tcTabNavContainer.SelectedTab = tpReturn 'Show Return Tab
+
+            gbFine.BackColor = Color.White
+            lstReturnCartList.BackColor = Color.White
+        Catch ex As Exception
+            MsgBox("No database found. Please create entries in Book Rent screen first.")
+        End Try
+
 
     End Sub
 
@@ -424,13 +430,24 @@
     End Sub
 
     Private Sub LoadDataToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadDataToolStripMenuItem.Click
-        LoadGridData(dgvBookRentList_A, ThisFilename) 'loads data from file
-        MsgBox("File Loaded Succesfully.")
+
+        Try
+            LoadGridData(dgvBookRentList_A, ThisFilename) 'loads data from file
+            MsgBox("File Loaded Succesfully.")
+        Catch ex As Exception
+            MsgBox("No database found. Please create entries in Book Rent screen first.")
+        End Try
+
     End Sub
 
     Private Sub SaveDataToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveDataToolStripMenuItem.Click
-        SaveGridData(dgvBookRentList_A, ThisFilename) 'saves data to file
-        MsgBox("File Saved Succesfully.")
+        Try
+            SaveGridData(dgvBookRentList_A, ThisFilename) 'saves data to file
+            MsgBox("File Saved Succesfully.")
+        Catch ex As Exception
+            MsgBox("Could not save database file. Please run program from local machine or USB Drive.")
+        End Try
+
     End Sub
 
     Private Sub dgvBookRentListB_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBookRentList_B.CellContentClick, dgvBookRentList_B.CellClick

@@ -23,19 +23,6 @@ Partial Class frmMainAppWindow
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnReturn = New System.Windows.Forms.Button()
-        Me.btnRent = New System.Windows.Forms.Button()
-        Me.msTopMainMenu = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BookManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LoadDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SaveDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddBookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenDatabaseFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tpReturn = New System.Windows.Forms.TabPage()
         Me.gbFine = New System.Windows.Forms.GroupBox()
         Me.lstReturnCartList = New System.Windows.Forms.ListBox()
@@ -122,8 +109,6 @@ Partial Class frmMainAppWindow
         Me.Label23 = New System.Windows.Forms.Label()
         Me.tcTabNavContainer = New System.Windows.Forms.TabControl()
         Me.tpCheckOut = New System.Windows.Forms.TabPage()
-        Me.GroupBox11 = New System.Windows.Forms.GroupBox()
-        Me.rtxtReceipt = New System.Windows.Forms.RichTextBox()
         Me.gbDenominations = New System.Windows.Forms.GroupBox()
         Me.btn50RM = New System.Windows.Forms.Button()
         Me.btn10Sen = New System.Windows.Forms.Button()
@@ -150,8 +135,18 @@ Partial Class frmMainAppWindow
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lblTextBoxValidation = New System.Windows.Forms.Label()
-        Me.Panel1.SuspendLayout()
-        Me.msTopMainMenu.SuspendLayout()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnReturn = New System.Windows.Forms.Button()
+        Me.btnRent = New System.Windows.Forms.Button()
+        Me.msTopMainMenu = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BookManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LoadDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddBookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenDatabaseFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tpReturn.SuspendLayout()
         Me.gbFine.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
@@ -167,143 +162,12 @@ Partial Class frmMainAppWindow
         Me.GroupBox2.SuspendLayout()
         Me.tcTabNavContainer.SuspendLayout()
         Me.tpCheckOut.SuspendLayout()
-        Me.GroupBox11.SuspendLayout()
         Me.gbDenominations.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.msTopMainMenu.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.btnReturn)
-        Me.Panel1.Controls.Add(Me.btnRent)
-        Me.Panel1.Location = New System.Drawing.Point(0, 25)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(160, 629)
-        Me.Panel1.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(37, 44)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 25)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "BOOKS"
-        '
-        'btnReturn
-        '
-        Me.btnReturn.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnReturn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnReturn.FlatAppearance.BorderSize = 0
-        Me.btnReturn.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.WindowFrame
-        Me.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen
-        Me.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReturn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReturn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnReturn.Location = New System.Drawing.Point(-3, 126)
-        Me.btnReturn.Name = "btnReturn"
-        Me.btnReturn.Size = New System.Drawing.Size(163, 43)
-        Me.btnReturn.TabIndex = 2
-        Me.btnReturn.Text = "Return"
-        Me.btnReturn.UseVisualStyleBackColor = False
-        '
-        'btnRent
-        '
-        Me.btnRent.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnRent.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnRent.FlatAppearance.BorderSize = 0
-        Me.btnRent.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.WindowFrame
-        Me.btnRent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen
-        Me.btnRent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRent.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRent.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnRent.Location = New System.Drawing.Point(-3, 82)
-        Me.btnRent.Name = "btnRent"
-        Me.btnRent.Size = New System.Drawing.Size(163, 43)
-        Me.btnRent.TabIndex = 0
-        Me.btnRent.Text = "Rent / Issue"
-        Me.btnRent.UseVisualStyleBackColor = False
-        '
-        'msTopMainMenu
-        '
-        Me.msTopMainMenu.AutoSize = False
-        Me.msTopMainMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.msTopMainMenu.Dock = System.Windows.Forms.DockStyle.None
-        Me.msTopMainMenu.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.msTopMainMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.BookManagementToolStripMenuItem})
-        Me.msTopMainMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
-        Me.msTopMainMenu.Location = New System.Drawing.Point(0, 0)
-        Me.msTopMainMenu.Name = "msTopMainMenu"
-        Me.msTopMainMenu.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.msTopMainMenu.Size = New System.Drawing.Size(1164, 25)
-        Me.msTopMainMenu.TabIndex = 2
-        Me.msTopMainMenu.Text = "Menu"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogOutToolStripMenuItem, Me.ExitToolStripMenuItem})
-        Me.FileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(39, 25)
-        Me.FileToolStripMenuItem.Text = "&File"
-        '
-        'LogOutToolStripMenuItem
-        '
-        Me.LogOutToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LogOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem"
-        Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
-        Me.LogOutToolStripMenuItem.Text = "Log &Out"
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ExitToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
-        Me.ExitToolStripMenuItem.Text = "E&xit"
-        '
-        'BookManagementToolStripMenuItem
-        '
-        Me.BookManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadDataToolStripMenuItem, Me.SaveDataToolStripMenuItem, Me.AddBookToolStripMenuItem, Me.OpenDatabaseFileToolStripMenuItem})
-        Me.BookManagementToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BookManagementToolStripMenuItem.Name = "BookManagementToolStripMenuItem"
-        Me.BookManagementToolStripMenuItem.Size = New System.Drawing.Size(128, 25)
-        Me.BookManagementToolStripMenuItem.Text = "Data Management"
-        '
-        'LoadDataToolStripMenuItem
-        '
-        Me.LoadDataToolStripMenuItem.BackColor = System.Drawing.Color.Ivory
-        Me.LoadDataToolStripMenuItem.Name = "LoadDataToolStripMenuItem"
-        Me.LoadDataToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
-        Me.LoadDataToolStripMenuItem.Text = "Load Database"
-        '
-        'SaveDataToolStripMenuItem
-        '
-        Me.SaveDataToolStripMenuItem.BackColor = System.Drawing.Color.Honeydew
-        Me.SaveDataToolStripMenuItem.Name = "SaveDataToolStripMenuItem"
-        Me.SaveDataToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
-        Me.SaveDataToolStripMenuItem.Text = "Save Database"
-        '
-        'AddBookToolStripMenuItem
-        '
-        Me.AddBookToolStripMenuItem.BackColor = System.Drawing.Color.MistyRose
-        Me.AddBookToolStripMenuItem.Name = "AddBookToolStripMenuItem"
-        Me.AddBookToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
-        Me.AddBookToolStripMenuItem.Text = "Delete Database"
-        '
-        'OpenDatabaseFileToolStripMenuItem
-        '
-        Me.OpenDatabaseFileToolStripMenuItem.Name = "OpenDatabaseFileToolStripMenuItem"
-        Me.OpenDatabaseFileToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
-        Me.OpenDatabaseFileToolStripMenuItem.Text = "Open Database File"
         '
         'tpReturn
         '
@@ -315,7 +179,7 @@ Partial Class frmMainAppWindow
         Me.tpReturn.Location = New System.Drawing.Point(4, 14)
         Me.tpReturn.Margin = New System.Windows.Forms.Padding(0)
         Me.tpReturn.Name = "tpReturn"
-        Me.tpReturn.Size = New System.Drawing.Size(996, 612)
+        Me.tpReturn.Size = New System.Drawing.Size(992, 606)
         Me.tpReturn.TabIndex = 1
         Me.tpReturn.Text = "Return"
         '
@@ -338,7 +202,7 @@ Partial Class frmMainAppWindow
         '
         'lstReturnCartList
         '
-        Me.lstReturnCartList.BackColor = System.Drawing.Color.White
+        Me.lstReturnCartList.BackColor = System.Drawing.Color.MistyRose
         Me.lstReturnCartList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lstReturnCartList.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstReturnCartList.FormattingEnabled = True
@@ -376,7 +240,7 @@ Partial Class frmMainAppWindow
         Me.btnReturnCheckout.BackColor = System.Drawing.Color.Firebrick
         Me.btnReturnCheckout.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btnReturnCheckout.FlatAppearance.BorderSize = 0
-        Me.btnReturnCheckout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnReturnCheckout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnReturnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReturnCheckout.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReturnCheckout.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -523,16 +387,16 @@ Partial Class frmMainAppWindow
         '
         Me.lblReturnStatus.AutoSize = True
         Me.lblReturnStatus.BackColor = System.Drawing.Color.MediumSpringGreen
-        Me.lblReturnStatus.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
+        Me.lblReturnStatus.Font = New System.Drawing.Font("Segoe UI Semibold", 14.0!)
         Me.lblReturnStatus.ForeColor = System.Drawing.Color.Ivory
         Me.lblReturnStatus.Location = New System.Drawing.Point(131, 195)
         Me.lblReturnStatus.Name = "lblReturnStatus"
-        Me.lblReturnStatus.Size = New System.Drawing.Size(0, 21)
+        Me.lblReturnStatus.Size = New System.Drawing.Size(0, 25)
         Me.lblReturnStatus.TabIndex = 20
         '
         'txtReturnBookID
         '
-        Me.txtReturnBookID.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.txtReturnBookID.BackColor = System.Drawing.SystemColors.Control
         Me.txtReturnBookID.Cursor = System.Windows.Forms.Cursors.Hand
         Me.txtReturnBookID.Location = New System.Drawing.Point(129, 25)
         Me.txtReturnBookID.Mask = "a00"
@@ -544,13 +408,13 @@ Partial Class frmMainAppWindow
         '
         'btnReturnBook
         '
-        Me.btnReturnBook.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnReturnBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(223, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btnReturnBook.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnReturnBook.FlatAppearance.BorderSize = 0
-        Me.btnReturnBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnReturnBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnReturnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReturnBook.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReturnBook.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnReturnBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnReturnBook.Location = New System.Drawing.Point(129, 155)
         Me.btnReturnBook.Name = "btnReturnBook"
         Me.btnReturnBook.Size = New System.Drawing.Size(95, 30)
@@ -560,7 +424,7 @@ Partial Class frmMainAppWindow
         '
         'txtReturnBookTitle
         '
-        Me.txtReturnBookTitle.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.txtReturnBookTitle.BackColor = System.Drawing.SystemColors.Control
         Me.txtReturnBookTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtReturnBookTitle.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtReturnBookTitle.Location = New System.Drawing.Point(129, 56)
@@ -593,7 +457,7 @@ Partial Class frmMainAppWindow
         '
         'txtReturnCustomerName
         '
-        Me.txtReturnCustomerName.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.txtReturnCustomerName.BackColor = System.Drawing.SystemColors.Control
         Me.txtReturnCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtReturnCustomerName.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtReturnCustomerName.Location = New System.Drawing.Point(129, 118)
@@ -604,7 +468,7 @@ Partial Class frmMainAppWindow
         '
         'txtReturnCustomerNum
         '
-        Me.txtReturnCustomerNum.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.txtReturnCustomerNum.BackColor = System.Drawing.SystemColors.Control
         Me.txtReturnCustomerNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtReturnCustomerNum.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtReturnCustomerNum.Location = New System.Drawing.Point(129, 87)
@@ -758,10 +622,10 @@ Partial Class frmMainAppWindow
         Me.tpRent.Controls.Add(Me.GroupBox4)
         Me.tpRent.Controls.Add(Me.GroupBox1)
         Me.tpRent.Controls.Add(Me.GroupBox2)
-        Me.tpRent.Location = New System.Drawing.Point(4, 14)
+        Me.tpRent.Location = New System.Drawing.Point(4, 24)
         Me.tpRent.Name = "tpRent"
         Me.tpRent.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpRent.Size = New System.Drawing.Size(996, 612)
+        Me.tpRent.Size = New System.Drawing.Size(992, 596)
         Me.tpRent.TabIndex = 0
         Me.tpRent.Text = "Rent"
         '
@@ -811,7 +675,7 @@ Partial Class frmMainAppWindow
         Me.btnCheckout.BackColor = System.Drawing.Color.Goldenrod
         Me.btnCheckout.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btnCheckout.FlatAppearance.BorderSize = 0
-        Me.btnCheckout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnCheckout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCheckout.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCheckout.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -1026,7 +890,7 @@ Partial Class frmMainAppWindow
         '
         'TextBox1
         '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(119, 91)
@@ -1049,7 +913,7 @@ Partial Class frmMainAppWindow
         '
         'txtCustomerNum
         '
-        Me.txtCustomerNum.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.txtCustomerNum.BackColor = System.Drawing.SystemColors.Control
         Me.txtCustomerNum.Location = New System.Drawing.Point(119, 22)
         Me.txtCustomerNum.Mask = "a00"
         Me.txtCustomerNum.Name = "txtCustomerNum"
@@ -1059,7 +923,7 @@ Partial Class frmMainAppWindow
         '
         'txtCustomerName
         '
-        Me.txtCustomerName.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.txtCustomerName.BackColor = System.Drawing.SystemColors.Control
         Me.txtCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCustomerName.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCustomerName.Location = New System.Drawing.Point(119, 55)
@@ -1128,7 +992,7 @@ Partial Class frmMainAppWindow
         '
         'cboRentPrice
         '
-        Me.cboRentPrice.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.cboRentPrice.BackColor = System.Drawing.SystemColors.Control
         Me.cboRentPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboRentPrice.FormattingEnabled = True
         Me.cboRentPrice.ItemHeight = 17
@@ -1139,7 +1003,7 @@ Partial Class frmMainAppWindow
         '
         'txtBookID
         '
-        Me.txtBookID.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.txtBookID.BackColor = System.Drawing.SystemColors.Control
         Me.txtBookID.Location = New System.Drawing.Point(112, 22)
         Me.txtBookID.Mask = "a00"
         Me.txtBookID.Name = "txtBookID"
@@ -1149,7 +1013,7 @@ Partial Class frmMainAppWindow
         '
         'txtPubYear
         '
-        Me.txtPubYear.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.txtPubYear.BackColor = System.Drawing.SystemColors.Control
         Me.txtPubYear.Location = New System.Drawing.Point(112, 116)
         Me.txtPubYear.Mask = "0000"
         Me.txtPubYear.Name = "txtPubYear"
@@ -1159,10 +1023,10 @@ Partial Class frmMainAppWindow
         '
         'btnUpdateEntry
         '
-        Me.btnUpdateEntry.BackColor = System.Drawing.Color.DimGray
+        Me.btnUpdateEntry.BackColor = System.Drawing.Color.Gray
         Me.btnUpdateEntry.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btnUpdateEntry.FlatAppearance.BorderSize = 0
-        Me.btnUpdateEntry.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnUpdateEntry.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnUpdateEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdateEntry.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdateEntry.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -1175,10 +1039,10 @@ Partial Class frmMainAppWindow
         '
         'btnClearFields
         '
-        Me.btnClearFields.BackColor = System.Drawing.Color.DimGray
+        Me.btnClearFields.BackColor = System.Drawing.Color.Gray
         Me.btnClearFields.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btnClearFields.FlatAppearance.BorderSize = 0
-        Me.btnClearFields.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnClearFields.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnClearFields.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClearFields.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClearFields.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -1191,13 +1055,13 @@ Partial Class frmMainAppWindow
         '
         'btnIssueBook
         '
-        Me.btnIssueBook.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnIssueBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(223, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btnIssueBook.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btnIssueBook.FlatAppearance.BorderSize = 0
-        Me.btnIssueBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnIssueBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnIssueBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIssueBook.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIssueBook.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnIssueBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnIssueBook.Location = New System.Drawing.Point(20, 234)
         Me.btnIssueBook.Name = "btnIssueBook"
         Me.btnIssueBook.Size = New System.Drawing.Size(94, 30)
@@ -1218,7 +1082,7 @@ Partial Class frmMainAppWindow
         '
         'txtAuthor
         '
-        Me.txtAuthor.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.txtAuthor.BackColor = System.Drawing.SystemColors.Control
         Me.txtAuthor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAuthor.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAuthor.Location = New System.Drawing.Point(112, 85)
@@ -1228,7 +1092,7 @@ Partial Class frmMainAppWindow
         '
         'txtBookTitle
         '
-        Me.txtBookTitle.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.txtBookTitle.BackColor = System.Drawing.SystemColors.Control
         Me.txtBookTitle.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBookTitle.Location = New System.Drawing.Point(112, 55)
         Me.txtBookTitle.Name = "txtBookTitle"
@@ -1275,49 +1139,27 @@ Partial Class frmMainAppWindow
         Me.tcTabNavContainer.Controls.Add(Me.tpReturn)
         Me.tcTabNavContainer.Controls.Add(Me.tpCheckOut)
         Me.tcTabNavContainer.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.tcTabNavContainer.ItemSize = New System.Drawing.Size(0, 10)
-        Me.tcTabNavContainer.Location = New System.Drawing.Point(158, 14)
+        Me.tcTabNavContainer.ItemSize = New System.Drawing.Size(0, 20)
+        Me.tcTabNavContainer.Location = New System.Drawing.Point(175, 74)
         Me.tcTabNavContainer.Margin = New System.Windows.Forms.Padding(0)
         Me.tcTabNavContainer.Multiline = True
         Me.tcTabNavContainer.Name = "tcTabNavContainer"
         Me.tcTabNavContainer.Padding = New System.Drawing.Point(0, 0)
         Me.tcTabNavContainer.SelectedIndex = 0
-        Me.tcTabNavContainer.Size = New System.Drawing.Size(1004, 630)
+        Me.tcTabNavContainer.Size = New System.Drawing.Size(1000, 624)
         Me.tcTabNavContainer.TabIndex = 0
         '
         'tpCheckOut
         '
         Me.tpCheckOut.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.tpCheckOut.Controls.Add(Me.GroupBox11)
         Me.tpCheckOut.Controls.Add(Me.gbDenominations)
         Me.tpCheckOut.Controls.Add(Me.GroupBox10)
         Me.tpCheckOut.Location = New System.Drawing.Point(4, 14)
         Me.tpCheckOut.Name = "tpCheckOut"
         Me.tpCheckOut.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCheckOut.Size = New System.Drawing.Size(996, 612)
+        Me.tpCheckOut.Size = New System.Drawing.Size(992, 609)
         Me.tpCheckOut.TabIndex = 3
         Me.tpCheckOut.Text = "Check Out"
-        '
-        'GroupBox11
-        '
-        Me.GroupBox11.Controls.Add(Me.rtxtReceipt)
-        Me.GroupBox11.Location = New System.Drawing.Point(488, 54)
-        Me.GroupBox11.Name = "GroupBox11"
-        Me.GroupBox11.Size = New System.Drawing.Size(268, 474)
-        Me.GroupBox11.TabIndex = 15
-        Me.GroupBox11.TabStop = False
-        '
-        'rtxtReceipt
-        '
-        Me.rtxtReceipt.BackColor = System.Drawing.SystemColors.Control
-        Me.rtxtReceipt.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.rtxtReceipt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rtxtReceipt.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxtReceipt.Location = New System.Drawing.Point(3, 21)
-        Me.rtxtReceipt.Name = "rtxtReceipt"
-        Me.rtxtReceipt.Size = New System.Drawing.Size(262, 450)
-        Me.rtxtReceipt.TabIndex = 14
-        Me.rtxtReceipt.Text = ""
         '
         'gbDenominations
         '
@@ -1330,7 +1172,7 @@ Partial Class frmMainAppWindow
         Me.gbDenominations.Controls.Add(Me.btn5RM)
         Me.gbDenominations.Controls.Add(Me.btn1RM)
         Me.gbDenominations.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.gbDenominations.Location = New System.Drawing.Point(244, 54)
+        Me.gbDenominations.Location = New System.Drawing.Point(357, 53)
         Me.gbDenominations.Name = "gbDenominations"
         Me.gbDenominations.Size = New System.Drawing.Size(238, 137)
         Me.gbDenominations.TabIndex = 13
@@ -1342,7 +1184,7 @@ Partial Class frmMainAppWindow
         Me.btn50RM.BackColor = System.Drawing.Color.DarkGoldenrod
         Me.btn50RM.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btn50RM.FlatAppearance.BorderSize = 0
-        Me.btn50RM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btn50RM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn50RM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn50RM.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btn50RM.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -1359,7 +1201,7 @@ Partial Class frmMainAppWindow
         Me.btn10Sen.BackColor = System.Drawing.Color.Goldenrod
         Me.btn10Sen.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btn10Sen.FlatAppearance.BorderSize = 0
-        Me.btn10Sen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btn10Sen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn10Sen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn10Sen.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btn10Sen.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -1376,7 +1218,7 @@ Partial Class frmMainAppWindow
         Me.btn20RM.BackColor = System.Drawing.Color.DarkGoldenrod
         Me.btn20RM.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btn20RM.FlatAppearance.BorderSize = 0
-        Me.btn20RM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btn20RM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn20RM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn20RM.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btn20RM.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -1393,7 +1235,7 @@ Partial Class frmMainAppWindow
         Me.btn20Sen.BackColor = System.Drawing.Color.Goldenrod
         Me.btn20Sen.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btn20Sen.FlatAppearance.BorderSize = 0
-        Me.btn20Sen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btn20Sen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn20Sen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn20Sen.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btn20Sen.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -1410,7 +1252,7 @@ Partial Class frmMainAppWindow
         Me.btn10RM.BackColor = System.Drawing.Color.DarkGoldenrod
         Me.btn10RM.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btn10RM.FlatAppearance.BorderSize = 0
-        Me.btn10RM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btn10RM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn10RM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn10RM.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btn10RM.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -1427,7 +1269,7 @@ Partial Class frmMainAppWindow
         Me.btn50Sen.BackColor = System.Drawing.Color.Goldenrod
         Me.btn50Sen.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btn50Sen.FlatAppearance.BorderSize = 0
-        Me.btn50Sen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btn50Sen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn50Sen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn50Sen.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btn50Sen.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -1444,7 +1286,7 @@ Partial Class frmMainAppWindow
         Me.btn5RM.BackColor = System.Drawing.Color.DarkGoldenrod
         Me.btn5RM.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btn5RM.FlatAppearance.BorderSize = 0
-        Me.btn5RM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btn5RM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn5RM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn5RM.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btn5RM.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -1461,7 +1303,7 @@ Partial Class frmMainAppWindow
         Me.btn1RM.BackColor = System.Drawing.Color.DarkGoldenrod
         Me.btn1RM.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btn1RM.FlatAppearance.BorderSize = 0
-        Me.btn1RM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btn1RM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn1RM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn1RM.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btn1RM.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -1487,7 +1329,7 @@ Partial Class frmMainAppWindow
         Me.GroupBox10.Controls.Add(Me.lblCheckOutBill)
         Me.GroupBox10.Controls.Add(Me.Label33)
         Me.GroupBox10.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox10.Location = New System.Drawing.Point(244, 197)
+        Me.GroupBox10.Location = New System.Drawing.Point(357, 196)
         Me.GroupBox10.Name = "GroupBox10"
         Me.GroupBox10.Size = New System.Drawing.Size(238, 335)
         Me.GroupBox10.TabIndex = 12
@@ -1499,7 +1341,7 @@ Partial Class frmMainAppWindow
         Me.btnClearPaid.BackColor = System.Drawing.SystemColors.ControlDark
         Me.btnClearPaid.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btnClearPaid.FlatAppearance.BorderSize = 0
-        Me.btnClearPaid.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnClearPaid.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnClearPaid.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClearPaid.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClearPaid.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -1572,7 +1414,7 @@ Partial Class frmMainAppWindow
         Me.btnEndTransaction.BackColor = System.Drawing.Color.Goldenrod
         Me.btnEndTransaction.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btnEndTransaction.FlatAppearance.BorderSize = 0
-        Me.btnEndTransaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnEndTransaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnEndTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEndTransaction.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEndTransaction.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -1625,7 +1467,7 @@ Partial Class frmMainAppWindow
         '
         'btnLogout
         '
-        Me.btnLogout.BackColor = System.Drawing.Color.DimGray
+        Me.btnLogout.BackColor = System.Drawing.SystemColors.Control
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1664,11 +1506,137 @@ Partial Class frmMainAppWindow
         '
         Me.lblTextBoxValidation.AutoSize = True
         Me.lblTextBoxValidation.BackColor = System.Drawing.Color.Red
+        Me.lblTextBoxValidation.Font = New System.Drawing.Font("Segoe UI Semibold", 14.0!, System.Drawing.FontStyle.Bold)
         Me.lblTextBoxValidation.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.lblTextBoxValidation.Location = New System.Drawing.Point(115, 193)
+        Me.lblTextBoxValidation.Location = New System.Drawing.Point(115, 190)
         Me.lblTextBoxValidation.Name = "lblTextBoxValidation"
-        Me.lblTextBoxValidation.Size = New System.Drawing.Size(0, 17)
+        Me.lblTextBoxValidation.Size = New System.Drawing.Size(0, 25)
         Me.lblTextBoxValidation.TabIndex = 18
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.BackgroundImage = Global.BookRentalSystem.My.Resources.Resources.Artboard_3
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Panel1.Controls.Add(Me.btnReturn)
+        Me.Panel1.Controls.Add(Me.btnRent)
+        Me.Panel1.Location = New System.Drawing.Point(0, 25)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(160, 629)
+        Me.Panel1.TabIndex = 1
+        '
+        'btnReturn
+        '
+        Me.btnReturn.BackColor = System.Drawing.Color.Transparent
+        Me.btnReturn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnReturn.FlatAppearance.BorderSize = 0
+        Me.btnReturn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver
+        Me.btnReturn.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLight
+        Me.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control
+        Me.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReturn.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
+        Me.btnReturn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btnReturn.Location = New System.Drawing.Point(-11, 137)
+        Me.btnReturn.Name = "btnReturn"
+        Me.btnReturn.Size = New System.Drawing.Size(171, 43)
+        Me.btnReturn.TabIndex = 2
+        Me.btnReturn.Text = "Return"
+        Me.btnReturn.UseVisualStyleBackColor = False
+        '
+        'btnRent
+        '
+        Me.btnRent.BackColor = System.Drawing.Color.Transparent
+        Me.btnRent.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnRent.FlatAppearance.BorderSize = 0
+        Me.btnRent.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver
+        Me.btnRent.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLight
+        Me.btnRent.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control
+        Me.btnRent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRent.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
+        Me.btnRent.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btnRent.Location = New System.Drawing.Point(-11, 82)
+        Me.btnRent.Name = "btnRent"
+        Me.btnRent.Size = New System.Drawing.Size(171, 43)
+        Me.btnRent.TabIndex = 0
+        Me.btnRent.Text = "Rent / Issue"
+        Me.btnRent.UseVisualStyleBackColor = False
+        '
+        'msTopMainMenu
+        '
+        Me.msTopMainMenu.AutoSize = False
+        Me.msTopMainMenu.BackColor = System.Drawing.Color.White
+        Me.msTopMainMenu.BackgroundImage = Global.BookRentalSystem.My.Resources.Resources.Artboard_4
+        Me.msTopMainMenu.Dock = System.Windows.Forms.DockStyle.None
+        Me.msTopMainMenu.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.msTopMainMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.BookManagementToolStripMenuItem})
+        Me.msTopMainMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
+        Me.msTopMainMenu.Location = New System.Drawing.Point(0, 0)
+        Me.msTopMainMenu.Name = "msTopMainMenu"
+        Me.msTopMainMenu.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.msTopMainMenu.Size = New System.Drawing.Size(1164, 25)
+        Me.msTopMainMenu.TabIndex = 2
+        Me.msTopMainMenu.Text = "Menu"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.BackColor = System.Drawing.Color.White
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogOutToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(39, 25)
+        Me.FileToolStripMenuItem.Text = "&File"
+        '
+        'LogOutToolStripMenuItem
+        '
+        Me.LogOutToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.LogOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem"
+        Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
+        Me.LogOutToolStripMenuItem.Text = "Log &Out"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.BackColor = System.Drawing.Color.White
+        Me.ExitToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
+        Me.ExitToolStripMenuItem.Text = "E&xit"
+        '
+        'BookManagementToolStripMenuItem
+        '
+        Me.BookManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadDataToolStripMenuItem, Me.SaveDataToolStripMenuItem, Me.AddBookToolStripMenuItem, Me.OpenDatabaseFileToolStripMenuItem})
+        Me.BookManagementToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BookManagementToolStripMenuItem.Name = "BookManagementToolStripMenuItem"
+        Me.BookManagementToolStripMenuItem.Size = New System.Drawing.Size(128, 25)
+        Me.BookManagementToolStripMenuItem.Text = "Data Management"
+        '
+        'LoadDataToolStripMenuItem
+        '
+        Me.LoadDataToolStripMenuItem.BackColor = System.Drawing.Color.Ivory
+        Me.LoadDataToolStripMenuItem.Name = "LoadDataToolStripMenuItem"
+        Me.LoadDataToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+        Me.LoadDataToolStripMenuItem.Text = "Load Database"
+        '
+        'SaveDataToolStripMenuItem
+        '
+        Me.SaveDataToolStripMenuItem.BackColor = System.Drawing.Color.Honeydew
+        Me.SaveDataToolStripMenuItem.Name = "SaveDataToolStripMenuItem"
+        Me.SaveDataToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+        Me.SaveDataToolStripMenuItem.Text = "Save Database"
+        '
+        'AddBookToolStripMenuItem
+        '
+        Me.AddBookToolStripMenuItem.BackColor = System.Drawing.Color.MistyRose
+        Me.AddBookToolStripMenuItem.Name = "AddBookToolStripMenuItem"
+        Me.AddBookToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+        Me.AddBookToolStripMenuItem.Text = "Delete Database"
+        '
+        'OpenDatabaseFileToolStripMenuItem
+        '
+        Me.OpenDatabaseFileToolStripMenuItem.Name = "OpenDatabaseFileToolStripMenuItem"
+        Me.OpenDatabaseFileToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+        Me.OpenDatabaseFileToolStripMenuItem.Text = "Open Database File"
         '
         'frmMainAppWindow
         '
@@ -1687,10 +1655,6 @@ Partial Class frmMainAppWindow
         Me.Name = "frmMainAppWindow"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "NavigationPaneTest"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.msTopMainMenu.ResumeLayout(False)
-        Me.msTopMainMenu.PerformLayout()
         Me.tpReturn.ResumeLayout(False)
         Me.gbFine.ResumeLayout(False)
         Me.gbFine.PerformLayout()
@@ -1713,11 +1677,13 @@ Partial Class frmMainAppWindow
         Me.GroupBox2.PerformLayout()
         Me.tcTabNavContainer.ResumeLayout(False)
         Me.tpCheckOut.ResumeLayout(False)
-        Me.GroupBox11.ResumeLayout(False)
         Me.gbDenominations.ResumeLayout(False)
         Me.GroupBox10.ResumeLayout(False)
         Me.GroupBox10.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.msTopMainMenu.ResumeLayout(False)
+        Me.msTopMainMenu.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1791,7 +1757,6 @@ Partial Class frmMainAppWindow
     Friend WithEvents lblitemNumA As Label
     Friend WithEvents lblCheckOutBill As Label
     Friend WithEvents Label33 As Label
-    Friend WithEvents rtxtReceipt As RichTextBox
     Friend WithEvents gbDenominations As GroupBox
     Friend WithEvents btn50RM As Button
     Friend WithEvents btn10Sen As Button
@@ -1806,7 +1771,6 @@ Partial Class frmMainAppWindow
     Friend WithEvents lblCheckOutPaid As Label
     Friend WithEvents Label32 As Label
     Friend WithEvents btnClearPaid As Button
-    Friend WithEvents GroupBox11 As GroupBox
     Friend WithEvents LoadDataToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveDataToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lstRentCartList As ListBox
@@ -1845,7 +1809,6 @@ Partial Class frmMainAppWindow
     Friend WithEvents lstReturnCartList As ListBox
     Friend WithEvents OpenDatabaseFileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents Label1 As Label
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents lblTextBoxValidation As Label
 End Class

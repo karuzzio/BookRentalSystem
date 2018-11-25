@@ -138,5 +138,23 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 11.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

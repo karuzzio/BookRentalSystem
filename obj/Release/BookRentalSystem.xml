@@ -22,5 +22,35 @@ BookRentalSystem
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:BookRentalSystem.My.Resources.Resources.Artboard_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BookRentalSystem.My.Resources.Resources.Artboard_11">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BookRentalSystem.My.Resources.Resources.Artboard_2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BookRentalSystem.My.Resources.Resources.Artboard_3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BookRentalSystem.My.Resources.Resources.Artboard_4">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BookRentalSystem.My.Resources.Resources.Asset_3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>
