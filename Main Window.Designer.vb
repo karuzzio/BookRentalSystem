@@ -23,13 +23,9 @@ Partial Class frmMainAppWindow
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMainAppWindow))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lstbDebug = New System.Windows.Forms.ListBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnReturn = New System.Windows.Forms.Button()
-        Me.btnPlaceHolder1 = New System.Windows.Forms.Button()
         Me.btnRent = New System.Windows.Forms.Button()
         Me.msTopMainMenu = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -39,30 +35,13 @@ Partial Class frmMainAppWindow
         Me.LoadDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddBookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tpAddBook = New System.Windows.Forms.TabPage()
-        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnLogin = New System.Windows.Forms.Button()
-        Me.btnSelectImage = New System.Windows.Forms.Button()
-        Me.txtQuantity = New System.Windows.Forms.TextBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.txtPublicationYear = New System.Windows.Forms.TextBox()
-        Me.txtMarketPrice = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
+        Me.OpenDatabaseFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tpReturn = New System.Windows.Forms.TabPage()
         Me.gbFine = New System.Windows.Forms.GroupBox()
+        Me.lstReturnCartList = New System.Windows.Forms.ListBox()
         Me.lblTotalFine = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnReturnCheckout = New System.Windows.Forms.Button()
         Me.lblSelectedFine = New System.Windows.Forms.Label()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
@@ -77,9 +56,8 @@ Partial Class frmMainAppWindow
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.lblReturnStatus = New System.Windows.Forms.Label()
         Me.txtReturnBookID = New System.Windows.Forms.MaskedTextBox()
-        Me.cbBookCondition = New System.Windows.Forms.ComboBox()
         Me.btnReturnBook = New System.Windows.Forms.Button()
         Me.txtReturnBookTitle = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
@@ -89,7 +67,6 @@ Partial Class frmMainAppWindow
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.lblDaysOverdue = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.dtpReturnDate = New System.Windows.Forms.DateTimePicker()
@@ -100,7 +77,7 @@ Partial Class frmMainAppWindow
         Me.Label10 = New System.Windows.Forms.Label()
         Me.tpRent = New System.Windows.Forms.TabPage()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
-        Me.lstCartList = New System.Windows.Forms.ListBox()
+        Me.lstRentCartList = New System.Windows.Forms.ListBox()
         Me.lblNumItems = New System.Windows.Forms.Label()
         Me.btnCheckout = New System.Windows.Forms.Button()
         Me.Label29 = New System.Windows.Forms.Label()
@@ -123,6 +100,8 @@ Partial Class frmMainAppWindow
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.txtCustomerNum = New System.Windows.Forms.MaskedTextBox()
         Me.txtCustomerName = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -133,8 +112,6 @@ Partial Class frmMainAppWindow
         Me.txtBookID = New System.Windows.Forms.MaskedTextBox()
         Me.txtPubYear = New System.Windows.Forms.MaskedTextBox()
         Me.btnUpdateEntry = New System.Windows.Forms.Button()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.Label25 = New System.Windows.Forms.Label()
         Me.btnClearFields = New System.Windows.Forms.Button()
         Me.btnIssueBook = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
@@ -164,27 +141,17 @@ Partial Class frmMainAppWindow
         Me.Label32 = New System.Windows.Forms.Label()
         Me.lblCheckOutItems = New System.Windows.Forms.Label()
         Me.btnEndTransaction = New System.Windows.Forms.Button()
-        Me.Label31 = New System.Windows.Forms.Label()
+        Me.lblitemNumA = New System.Windows.Forms.Label()
         Me.lblCheckOutBill = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.CutToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.CopyToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.PasteToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.btnCloseApp = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.lblTextBoxValidation = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.msTopMainMenu.SuspendLayout()
-        Me.tpAddBook.SuspendLayout()
-        Me.GroupBox7.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tpReturn.SuspendLayout()
         Me.gbFine.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
@@ -203,68 +170,31 @@ Partial Class frmMainAppWindow
         Me.GroupBox11.SuspendLayout()
         Me.gbDenominations.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.lstbDebug)
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.btnReturn)
-        Me.Panel1.Controls.Add(Me.btnPlaceHolder1)
         Me.Panel1.Controls.Add(Me.btnRent)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel1.Location = New System.Drawing.Point(0, 24)
+        Me.Panel1.Location = New System.Drawing.Point(0, 25)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(160, 630)
+        Me.Panel1.Size = New System.Drawing.Size(160, 629)
         Me.Panel1.TabIndex = 1
         '
-        'lstbDebug
+        'Label1
         '
-        Me.lstbDebug.FormattingEnabled = True
-        Me.lstbDebug.Location = New System.Drawing.Point(4, 326)
-        Me.lstbDebug.Name = "lstbDebug"
-        Me.lstbDebug.Size = New System.Drawing.Size(153, 199)
-        Me.lstbDebug.TabIndex = 5
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button3.Enabled = False
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.WindowFrame
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(-3, 236)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(163, 29)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "USERS"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.Enabled = False
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.WindowFrame
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(-3, 53)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(163, 29)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "BOOKS"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.Location = New System.Drawing.Point(37, 44)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(73, 25)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "BOOKS"
         '
         'btnReturn
         '
@@ -282,23 +212,6 @@ Partial Class frmMainAppWindow
         Me.btnReturn.TabIndex = 2
         Me.btnReturn.Text = "Return"
         Me.btnReturn.UseVisualStyleBackColor = False
-        '
-        'btnPlaceHolder1
-        '
-        Me.btnPlaceHolder1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnPlaceHolder1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnPlaceHolder1.FlatAppearance.BorderSize = 0
-        Me.btnPlaceHolder1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.WindowFrame
-        Me.btnPlaceHolder1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen
-        Me.btnPlaceHolder1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPlaceHolder1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPlaceHolder1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnPlaceHolder1.Location = New System.Drawing.Point(-3, 170)
-        Me.btnPlaceHolder1.Name = "btnPlaceHolder1"
-        Me.btnPlaceHolder1.Size = New System.Drawing.Size(163, 43)
-        Me.btnPlaceHolder1.TabIndex = 1
-        Me.btnPlaceHolder1.Text = "Placeholder1"
-        Me.btnPlaceHolder1.UseVisualStyleBackColor = False
         '
         'btnRent
         '
@@ -319,14 +232,16 @@ Partial Class frmMainAppWindow
         '
         'msTopMainMenu
         '
+        Me.msTopMainMenu.AutoSize = False
         Me.msTopMainMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.msTopMainMenu.Dock = System.Windows.Forms.DockStyle.None
         Me.msTopMainMenu.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.msTopMainMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.BookManagementToolStripMenuItem})
         Me.msTopMainMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
         Me.msTopMainMenu.Location = New System.Drawing.Point(0, 0)
         Me.msTopMainMenu.Name = "msTopMainMenu"
         Me.msTopMainMenu.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.msTopMainMenu.Size = New System.Drawing.Size(1164, 24)
+        Me.msTopMainMenu.Size = New System.Drawing.Size(1164, 25)
         Me.msTopMainMenu.TabIndex = 2
         Me.msTopMainMenu.Text = "Menu"
         '
@@ -336,7 +251,7 @@ Partial Class frmMainAppWindow
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogOutToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(39, 24)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(39, 25)
         Me.FileToolStripMenuItem.Text = "&File"
         '
         'LogOutToolStripMenuItem
@@ -357,254 +272,38 @@ Partial Class frmMainAppWindow
         '
         'BookManagementToolStripMenuItem
         '
-        Me.BookManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadDataToolStripMenuItem, Me.SaveDataToolStripMenuItem, Me.AddBookToolStripMenuItem})
+        Me.BookManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadDataToolStripMenuItem, Me.SaveDataToolStripMenuItem, Me.AddBookToolStripMenuItem, Me.OpenDatabaseFileToolStripMenuItem})
         Me.BookManagementToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BookManagementToolStripMenuItem.Name = "BookManagementToolStripMenuItem"
-        Me.BookManagementToolStripMenuItem.Size = New System.Drawing.Size(128, 24)
+        Me.BookManagementToolStripMenuItem.Size = New System.Drawing.Size(128, 25)
         Me.BookManagementToolStripMenuItem.Text = "Data Management"
         '
         'LoadDataToolStripMenuItem
         '
         Me.LoadDataToolStripMenuItem.BackColor = System.Drawing.Color.Ivory
         Me.LoadDataToolStripMenuItem.Name = "LoadDataToolStripMenuItem"
-        Me.LoadDataToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.LoadDataToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
         Me.LoadDataToolStripMenuItem.Text = "Load Database"
         '
         'SaveDataToolStripMenuItem
         '
         Me.SaveDataToolStripMenuItem.BackColor = System.Drawing.Color.Honeydew
         Me.SaveDataToolStripMenuItem.Name = "SaveDataToolStripMenuItem"
-        Me.SaveDataToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.SaveDataToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
         Me.SaveDataToolStripMenuItem.Text = "Save Database"
         '
         'AddBookToolStripMenuItem
         '
         Me.AddBookToolStripMenuItem.BackColor = System.Drawing.Color.MistyRose
         Me.AddBookToolStripMenuItem.Name = "AddBookToolStripMenuItem"
-        Me.AddBookToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.AddBookToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
         Me.AddBookToolStripMenuItem.Text = "Delete Database"
         '
-        'tpAddBook
+        'OpenDatabaseFileToolStripMenuItem
         '
-        Me.tpAddBook.BackColor = System.Drawing.Color.White
-        Me.tpAddBook.Controls.Add(Me.GroupBox7)
-        Me.tpAddBook.Location = New System.Drawing.Point(4, 24)
-        Me.tpAddBook.Margin = New System.Windows.Forms.Padding(0)
-        Me.tpAddBook.Name = "tpAddBook"
-        Me.tpAddBook.Size = New System.Drawing.Size(996, 602)
-        Me.tpAddBook.TabIndex = 2
-        Me.tpAddBook.Text = "Add Book"
-        '
-        'GroupBox7
-        '
-        Me.GroupBox7.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GroupBox7.Controls.Add(Me.TextBox4)
-        Me.GroupBox7.Controls.Add(Me.Label1)
-        Me.GroupBox7.Controls.Add(Me.btnLogin)
-        Me.GroupBox7.Controls.Add(Me.btnSelectImage)
-        Me.GroupBox7.Controls.Add(Me.txtQuantity)
-        Me.GroupBox7.Controls.Add(Me.PictureBox3)
-        Me.GroupBox7.Controls.Add(Me.Label17)
-        Me.GroupBox7.Controls.Add(Me.txtPublicationYear)
-        Me.GroupBox7.Controls.Add(Me.txtMarketPrice)
-        Me.GroupBox7.Controls.Add(Me.Label18)
-        Me.GroupBox7.Controls.Add(Me.Label19)
-        Me.GroupBox7.Controls.Add(Me.TextBox5)
-        Me.GroupBox7.Controls.Add(Me.TextBox6)
-        Me.GroupBox7.Controls.Add(Me.TextBox7)
-        Me.GroupBox7.Controls.Add(Me.Label20)
-        Me.GroupBox7.Controls.Add(Me.Label21)
-        Me.GroupBox7.Controls.Add(Me.Label22)
-        Me.GroupBox7.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox7.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(599, 306)
-        Me.GroupBox7.TabIndex = 15
-        Me.GroupBox7.TabStop = False
-        Me.GroupBox7.Text = "Book Information"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(324, 162)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(253, 25)
-        Me.TextBox4.TabIndex = 13
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(189, 165)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(105, 17)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Rent Price (RM) :"
-        '
-        'btnLogin
-        '
-        Me.btnLogin.BackColor = System.Drawing.Color.MediumTurquoise
-        Me.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Teal
-        Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogin.Location = New System.Drawing.Point(324, 255)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(88, 27)
-        Me.btnLogin.TabIndex = 12
-        Me.btnLogin.Text = "&Add Book"
-        Me.btnLogin.UseVisualStyleBackColor = False
-        '
-        'btnSelectImage
-        '
-        Me.btnSelectImage.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnSelectImage.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnSelectImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSelectImage.Location = New System.Drawing.Point(32, 254)
-        Me.btnSelectImage.Name = "btnSelectImage"
-        Me.btnSelectImage.Size = New System.Drawing.Size(142, 29)
-        Me.btnSelectImage.TabIndex = 11
-        Me.btnSelectImage.Text = "&Select Image"
-        Me.btnSelectImage.UseVisualStyleBackColor = False
-        '
-        'txtQuantity
-        '
-        Me.txtQuantity.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtQuantity.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtQuantity.Location = New System.Drawing.Point(324, 224)
-        Me.txtQuantity.Name = "txtQuantity"
-        Me.txtQuantity.Size = New System.Drawing.Size(253, 25)
-        Me.txtQuantity.TabIndex = 8
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(32, 42)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(142, 210)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 10
-        Me.PictureBox3.TabStop = False
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.BackColor = System.Drawing.Color.Transparent
-        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(189, 226)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(63, 17)
-        Me.Label17.TabIndex = 9
-        Me.Label17.Text = "Quantity :"
-        '
-        'txtPublicationYear
-        '
-        Me.txtPublicationYear.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.txtPublicationYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtPublicationYear.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPublicationYear.Location = New System.Drawing.Point(324, 193)
-        Me.txtPublicationYear.Name = "txtPublicationYear"
-        Me.txtPublicationYear.Size = New System.Drawing.Size(253, 25)
-        Me.txtPublicationYear.TabIndex = 6
-        '
-        'txtMarketPrice
-        '
-        Me.txtMarketPrice.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.txtMarketPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtMarketPrice.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMarketPrice.Location = New System.Drawing.Point(324, 131)
-        Me.txtMarketPrice.Name = "txtMarketPrice"
-        Me.txtMarketPrice.Size = New System.Drawing.Size(253, 25)
-        Me.txtMarketPrice.TabIndex = 4
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.BackColor = System.Drawing.Color.Transparent
-        Me.Label18.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(189, 196)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(107, 17)
-        Me.Label18.TabIndex = 7
-        Me.Label18.Text = "Publication Year :"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.BackColor = System.Drawing.Color.Transparent
-        Me.Label19.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(189, 134)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(120, 17)
-        Me.Label19.TabIndex = 5
-        Me.Label19.Text = "Market Price (RM) :"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(324, 101)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(253, 25)
-        Me.TextBox5.TabIndex = 2
-        '
-        'TextBox6
-        '
-        Me.TextBox6.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox6.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(324, 71)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(253, 25)
-        Me.TextBox6.TabIndex = 1
-        '
-        'TextBox7
-        '
-        Me.TextBox7.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox7.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(324, 41)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(95, 25)
-        Me.TextBox7.TabIndex = 0
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.BackColor = System.Drawing.Color.Transparent
-        Me.Label20.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(189, 104)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(68, 17)
-        Me.Label20.TabIndex = 3
-        Me.Label20.Text = "Author(s) :"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.BackColor = System.Drawing.Color.Transparent
-        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(189, 74)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(72, 17)
-        Me.Label21.TabIndex = 1
-        Me.Label21.Text = "Book Title :"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.BackColor = System.Drawing.Color.Transparent
-        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(189, 44)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(52, 17)
-        Me.Label22.TabIndex = 0
-        Me.Label22.Text = "ID No. :"
+        Me.OpenDatabaseFileToolStripMenuItem.Name = "OpenDatabaseFileToolStripMenuItem"
+        Me.OpenDatabaseFileToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+        Me.OpenDatabaseFileToolStripMenuItem.Text = "Open Database File"
         '
         'tpReturn
         '
@@ -613,36 +312,49 @@ Partial Class frmMainAppWindow
         Me.tpReturn.Controls.Add(Me.GroupBox8)
         Me.tpReturn.Controls.Add(Me.GroupBox5)
         Me.tpReturn.Controls.Add(Me.GroupBox3)
-        Me.tpReturn.Location = New System.Drawing.Point(4, 24)
+        Me.tpReturn.Location = New System.Drawing.Point(4, 14)
         Me.tpReturn.Margin = New System.Windows.Forms.Padding(0)
         Me.tpReturn.Name = "tpReturn"
-        Me.tpReturn.Size = New System.Drawing.Size(996, 602)
+        Me.tpReturn.Size = New System.Drawing.Size(996, 612)
         Me.tpReturn.TabIndex = 1
         Me.tpReturn.Text = "Return"
         '
         'gbFine
         '
         Me.gbFine.BackColor = System.Drawing.Color.MistyRose
-        Me.gbFine.Controls.Add(Me.ListBox1)
+        Me.gbFine.Controls.Add(Me.lstReturnCartList)
         Me.gbFine.Controls.Add(Me.lblTotalFine)
         Me.gbFine.Controls.Add(Me.Label28)
-        Me.gbFine.Controls.Add(Me.Button2)
+        Me.gbFine.Controls.Add(Me.btnReturnCheckout)
         Me.gbFine.Controls.Add(Me.lblSelectedFine)
         Me.gbFine.Controls.Add(Me.Label37)
         Me.gbFine.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.gbFine.Location = New System.Drawing.Point(808, 8)
+        Me.gbFine.Location = New System.Drawing.Point(786, 8)
         Me.gbFine.Name = "gbFine"
-        Me.gbFine.Size = New System.Drawing.Size(178, 228)
+        Me.gbFine.Size = New System.Drawing.Size(180, 228)
         Me.gbFine.TabIndex = 16
         Me.gbFine.TabStop = False
         Me.gbFine.Text = "Fine"
+        '
+        'lstReturnCartList
+        '
+        Me.lstReturnCartList.BackColor = System.Drawing.Color.White
+        Me.lstReturnCartList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lstReturnCartList.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lstReturnCartList.FormattingEnabled = True
+        Me.lstReturnCartList.ItemHeight = 17
+        Me.lstReturnCartList.Items.AddRange(New Object() {" "})
+        Me.lstReturnCartList.Location = New System.Drawing.Point(8, 19)
+        Me.lstReturnCartList.Name = "lstReturnCartList"
+        Me.lstReturnCartList.Size = New System.Drawing.Size(165, 87)
+        Me.lstReturnCartList.TabIndex = 21
         '
         'lblTotalFine
         '
         Me.lblTotalFine.AutoSize = True
         Me.lblTotalFine.BackColor = System.Drawing.Color.Transparent
         Me.lblTotalFine.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalFine.Location = New System.Drawing.Point(66, 151)
+        Me.lblTotalFine.Location = New System.Drawing.Point(73, 138)
         Me.lblTotalFine.Name = "lblTotalFine"
         Me.lblTotalFine.Size = New System.Drawing.Size(106, 30)
         Me.lblTotalFine.TabIndex = 20
@@ -653,36 +365,36 @@ Partial Class frmMainAppWindow
         Me.Label28.AutoSize = True
         Me.Label28.BackColor = System.Drawing.Color.Transparent
         Me.Label28.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(102, 136)
+        Me.Label28.Location = New System.Drawing.Point(8, 148)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(70, 17)
         Me.Label28.TabIndex = 19
         Me.Label28.Text = "Total Fine :"
         '
-        'Button2
+        'btnReturnCheckout
         '
-        Me.Button2.BackColor = System.Drawing.Color.Firebrick
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button2.Location = New System.Drawing.Point(78, 192)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(94, 30)
-        Me.Button2.TabIndex = 18
-        Me.Button2.Text = "Checkout"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnReturnCheckout.BackColor = System.Drawing.Color.Firebrick
+        Me.btnReturnCheckout.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnReturnCheckout.FlatAppearance.BorderSize = 0
+        Me.btnReturnCheckout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise
+        Me.btnReturnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReturnCheckout.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReturnCheckout.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnReturnCheckout.Location = New System.Drawing.Point(79, 184)
+        Me.btnReturnCheckout.Name = "btnReturnCheckout"
+        Me.btnReturnCheckout.Size = New System.Drawing.Size(94, 30)
+        Me.btnReturnCheckout.TabIndex = 18
+        Me.btnReturnCheckout.Text = "Checkout"
+        Me.btnReturnCheckout.UseVisualStyleBackColor = False
         '
         'lblSelectedFine
         '
         Me.lblSelectedFine.AutoSize = True
         Me.lblSelectedFine.BackColor = System.Drawing.Color.Transparent
-        Me.lblSelectedFine.Font = New System.Drawing.Font("Segoe UI Semibold", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.lblSelectedFine.Location = New System.Drawing.Point(76, 101)
+        Me.lblSelectedFine.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblSelectedFine.Location = New System.Drawing.Point(95, 111)
         Me.lblSelectedFine.Name = "lblSelectedFine"
-        Me.lblSelectedFine.Size = New System.Drawing.Size(96, 25)
+        Me.lblSelectedFine.Size = New System.Drawing.Size(79, 21)
         Me.lblSelectedFine.TabIndex = 9
         Me.lblSelectedFine.Text = "RM 00.00"
         '
@@ -691,7 +403,7 @@ Partial Class frmMainAppWindow
         Me.Label37.AutoSize = True
         Me.Label37.BackColor = System.Drawing.Color.Transparent
         Me.Label37.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(81, 86)
+        Me.Label37.Location = New System.Drawing.Point(8, 111)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(91, 17)
         Me.Label37.TabIndex = 2
@@ -702,7 +414,7 @@ Partial Class frmMainAppWindow
         Me.GroupBox8.Controls.Add(Me.dgvBookRentList_B)
         Me.GroupBox8.Location = New System.Drawing.Point(3, 242)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(986, 352)
+        Me.GroupBox8.Size = New System.Drawing.Size(963, 352)
         Me.GroupBox8.TabIndex = 11
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Return List"
@@ -721,7 +433,7 @@ Partial Class frmMainAppWindow
         Me.dgvBookRentList_B.Name = "dgvBookRentList_B"
         Me.dgvBookRentList_B.ReadOnly = True
         Me.dgvBookRentList_B.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgvBookRentList_B.Size = New System.Drawing.Size(979, 336)
+        Me.dgvBookRentList_B.Size = New System.Drawing.Size(951, 336)
         Me.dgvBookRentList_B.TabIndex = 8
         '
         'DataGridViewTextBoxColumn1
@@ -789,9 +501,8 @@ Partial Class frmMainAppWindow
         '
         Me.GroupBox5.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GroupBox5.Controls.Add(Me.Label12)
+        Me.GroupBox5.Controls.Add(Me.lblReturnStatus)
         Me.GroupBox5.Controls.Add(Me.txtReturnBookID)
-        Me.GroupBox5.Controls.Add(Me.cbBookCondition)
         Me.GroupBox5.Controls.Add(Me.btnReturnBook)
         Me.GroupBox5.Controls.Add(Me.txtReturnBookTitle)
         Me.GroupBox5.Controls.Add(Me.Label26)
@@ -803,21 +514,21 @@ Partial Class frmMainAppWindow
         Me.GroupBox5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox5.Location = New System.Drawing.Point(3, 6)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(450, 230)
+        Me.GroupBox5.Size = New System.Drawing.Size(417, 230)
         Me.GroupBox5.TabIndex = 8
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Return Infromation"
         '
-        'Label12
+        'lblReturnStatus
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(11, 152)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(71, 17)
-        Me.Label12.TabIndex = 7
-        Me.Label12.Text = "Condition :"
+        Me.lblReturnStatus.AutoSize = True
+        Me.lblReturnStatus.BackColor = System.Drawing.Color.MediumSpringGreen
+        Me.lblReturnStatus.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
+        Me.lblReturnStatus.ForeColor = System.Drawing.Color.Ivory
+        Me.lblReturnStatus.Location = New System.Drawing.Point(131, 195)
+        Me.lblReturnStatus.Name = "lblReturnStatus"
+        Me.lblReturnStatus.Size = New System.Drawing.Size(0, 21)
+        Me.lblReturnStatus.TabIndex = 20
         '
         'txtReturnBookID
         '
@@ -826,18 +537,10 @@ Partial Class frmMainAppWindow
         Me.txtReturnBookID.Location = New System.Drawing.Point(129, 25)
         Me.txtReturnBookID.Mask = "a00"
         Me.txtReturnBookID.Name = "txtReturnBookID"
+        Me.txtReturnBookID.ReadOnly = True
         Me.txtReturnBookID.Size = New System.Drawing.Size(81, 25)
         Me.txtReturnBookID.TabIndex = 19
         Me.txtReturnBookID.ValidatingType = GetType(Integer)
-        '
-        'cbBookCondition
-        '
-        Me.cbBookCondition.FormattingEnabled = True
-        Me.cbBookCondition.Items.AddRange(New Object() {"As New", "Fine", "Fair", "Poor"})
-        Me.cbBookCondition.Location = New System.Drawing.Point(129, 149)
-        Me.cbBookCondition.Name = "cbBookCondition"
-        Me.cbBookCondition.Size = New System.Drawing.Size(200, 25)
-        Me.cbBookCondition.TabIndex = 6
         '
         'btnReturnBook
         '
@@ -848,7 +551,7 @@ Partial Class frmMainAppWindow
         Me.btnReturnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReturnBook.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReturnBook.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnReturnBook.Location = New System.Drawing.Point(129, 194)
+        Me.btnReturnBook.Location = New System.Drawing.Point(129, 155)
         Me.btnReturnBook.Name = "btnReturnBook"
         Me.btnReturnBook.Size = New System.Drawing.Size(95, 30)
         Me.btnReturnBook.TabIndex = 15
@@ -862,7 +565,8 @@ Partial Class frmMainAppWindow
         Me.txtReturnBookTitle.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtReturnBookTitle.Location = New System.Drawing.Point(129, 56)
         Me.txtReturnBookTitle.Name = "txtReturnBookTitle"
-        Me.txtReturnBookTitle.Size = New System.Drawing.Size(293, 25)
+        Me.txtReturnBookTitle.ReadOnly = True
+        Me.txtReturnBookTitle.Size = New System.Drawing.Size(278, 25)
         Me.txtReturnBookTitle.TabIndex = 17
         '
         'Label26
@@ -894,7 +598,8 @@ Partial Class frmMainAppWindow
         Me.txtReturnCustomerName.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtReturnCustomerName.Location = New System.Drawing.Point(129, 118)
         Me.txtReturnCustomerName.Name = "txtReturnCustomerName"
-        Me.txtReturnCustomerName.Size = New System.Drawing.Size(293, 25)
+        Me.txtReturnCustomerName.ReadOnly = True
+        Me.txtReturnCustomerName.Size = New System.Drawing.Size(278, 25)
         Me.txtReturnCustomerName.TabIndex = 1
         '
         'txtReturnCustomerNum
@@ -904,6 +609,7 @@ Partial Class frmMainAppWindow
         Me.txtReturnCustomerNum.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtReturnCustomerNum.Location = New System.Drawing.Point(129, 87)
         Me.txtReturnCustomerNum.Name = "txtReturnCustomerNum"
+        Me.txtReturnCustomerNum.ReadOnly = True
         Me.txtReturnCustomerNum.Size = New System.Drawing.Size(95, 25)
         Me.txtReturnCustomerNum.TabIndex = 0
         '
@@ -942,24 +648,12 @@ Partial Class frmMainAppWindow
         Me.GroupBox3.Controls.Add(Me.Label7)
         Me.GroupBox3.Controls.Add(Me.Label10)
         Me.GroupBox3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(459, 8)
+        Me.GroupBox3.Location = New System.Drawing.Point(426, 8)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(343, 228)
+        Me.GroupBox3.Size = New System.Drawing.Size(354, 226)
         Me.GroupBox3.TabIndex = 7
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Date Information"
-        '
-        'ListBox1
-        '
-        Me.ListBox1.BackColor = System.Drawing.Color.Maroon
-        Me.ListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ListBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 17
-        Me.ListBox1.Location = New System.Drawing.Point(9, 17)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(160, 68)
-        Me.ListBox1.TabIndex = 21
         '
         'lblDaysOverdue
         '
@@ -979,9 +673,9 @@ Partial Class frmMainAppWindow
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(8, 129)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(70, 17)
+        Me.Label14.Size = New System.Drawing.Size(97, 17)
         Me.Label14.TabIndex = 22
-        Me.Label14.Text = "Total Fine :"
+        Me.Label14.Text = "Overdue Days :"
         '
         'dtpReturnDate
         '
@@ -1010,7 +704,8 @@ Partial Class frmMainAppWindow
         'dtpReturnDueDate
         '
         Me.dtpReturnDueDate.CalendarMonthBackground = System.Drawing.SystemColors.ControlDark
-        Me.dtpReturnDueDate.CalendarTitleBackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.dtpReturnDueDate.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText
+        Me.dtpReturnDueDate.CalendarTitleForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.dtpReturnDueDate.CustomFormat = "dd/MM/yyyy"
         Me.dtpReturnDueDate.Location = New System.Drawing.Point(119, 56)
         Me.dtpReturnDueDate.MaxDate = New Date(2019, 12, 31, 0, 0, 0, 0)
@@ -1063,17 +758,17 @@ Partial Class frmMainAppWindow
         Me.tpRent.Controls.Add(Me.GroupBox4)
         Me.tpRent.Controls.Add(Me.GroupBox1)
         Me.tpRent.Controls.Add(Me.GroupBox2)
-        Me.tpRent.Location = New System.Drawing.Point(4, 24)
+        Me.tpRent.Location = New System.Drawing.Point(4, 14)
         Me.tpRent.Name = "tpRent"
         Me.tpRent.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpRent.Size = New System.Drawing.Size(996, 602)
+        Me.tpRent.Size = New System.Drawing.Size(996, 612)
         Me.tpRent.TabIndex = 0
         Me.tpRent.Text = "Rent"
         '
         'GroupBox9
         '
         Me.GroupBox9.BackColor = System.Drawing.SystemColors.Info
-        Me.GroupBox9.Controls.Add(Me.lstCartList)
+        Me.GroupBox9.Controls.Add(Me.lstRentCartList)
         Me.GroupBox9.Controls.Add(Me.lblNumItems)
         Me.GroupBox9.Controls.Add(Me.btnCheckout)
         Me.GroupBox9.Controls.Add(Me.Label29)
@@ -1087,17 +782,18 @@ Partial Class frmMainAppWindow
         Me.GroupBox9.TabStop = False
         Me.GroupBox9.Text = " Cart"
         '
-        'lstCartList
+        'lstRentCartList
         '
-        Me.lstCartList.BackColor = System.Drawing.Color.Maroon
-        Me.lstCartList.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.lstCartList.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lstCartList.FormattingEnabled = True
-        Me.lstCartList.ItemHeight = 17
-        Me.lstCartList.Location = New System.Drawing.Point(9, 23)
-        Me.lstCartList.Name = "lstCartList"
-        Me.lstCartList.Size = New System.Drawing.Size(160, 119)
-        Me.lstCartList.TabIndex = 20
+        Me.lstRentCartList.BackColor = System.Drawing.SystemColors.Info
+        Me.lstRentCartList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lstRentCartList.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lstRentCartList.FormattingEnabled = True
+        Me.lstRentCartList.ItemHeight = 17
+        Me.lstRentCartList.Items.AddRange(New Object() {" "})
+        Me.lstRentCartList.Location = New System.Drawing.Point(9, 23)
+        Me.lstRentCartList.Name = "lstRentCartList"
+        Me.lstRentCartList.Size = New System.Drawing.Size(160, 121)
+        Me.lstRentCartList.TabIndex = 20
         '
         'lblNumItems
         '
@@ -1314,6 +1010,8 @@ Partial Class frmMainAppWindow
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.txtCustomerNum)
         Me.GroupBox1.Controls.Add(Me.txtCustomerName)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -1321,10 +1019,33 @@ Partial Class frmMainAppWindow
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(384, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(399, 119)
+        Me.GroupBox1.Size = New System.Drawing.Size(399, 142)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "   Customer Information"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(119, 91)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(253, 25)
+        Me.TextBox1.TabIndex = 18
+        Me.TextBox1.Text = "NONE"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(6, 93)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(89, 17)
+        Me.Label12.TabIndex = 17
+        Me.Label12.Text = "Pending Fine :"
         '
         'txtCustomerNum
         '
@@ -1351,7 +1072,7 @@ Partial Class frmMainAppWindow
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(6, 55)
+        Me.Label3.Location = New System.Drawing.Point(6, 57)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(110, 17)
         Me.Label3.TabIndex = 1
@@ -1372,13 +1093,12 @@ Partial Class frmMainAppWindow
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GroupBox2.Controls.Add(Me.lblTextBoxValidation)
         Me.GroupBox2.Controls.Add(Me.Label30)
         Me.GroupBox2.Controls.Add(Me.cboRentPrice)
         Me.GroupBox2.Controls.Add(Me.txtBookID)
         Me.GroupBox2.Controls.Add(Me.txtPubYear)
         Me.GroupBox2.Controls.Add(Me.btnUpdateEntry)
-        Me.GroupBox2.Controls.Add(Me.TextBox9)
-        Me.GroupBox2.Controls.Add(Me.Label25)
         Me.GroupBox2.Controls.Add(Me.btnClearFields)
         Me.GroupBox2.Controls.Add(Me.btnIssueBook)
         Me.GroupBox2.Controls.Add(Me.Label24)
@@ -1400,7 +1120,7 @@ Partial Class frmMainAppWindow
         Me.Label30.AutoSize = True
         Me.Label30.BackColor = System.Drawing.Color.Transparent
         Me.Label30.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(19, 183)
+        Me.Label30.Location = New System.Drawing.Point(10, 152)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(73, 17)
         Me.Label30.TabIndex = 17
@@ -1412,7 +1132,7 @@ Partial Class frmMainAppWindow
         Me.cboRentPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboRentPrice.FormattingEnabled = True
         Me.cboRentPrice.ItemHeight = 17
-        Me.cboRentPrice.Location = New System.Drawing.Point(121, 178)
+        Me.cboRentPrice.Location = New System.Drawing.Point(112, 147)
         Me.cboRentPrice.Name = "cboRentPrice"
         Me.cboRentPrice.Size = New System.Drawing.Size(196, 25)
         Me.cboRentPrice.TabIndex = 16
@@ -1420,7 +1140,7 @@ Partial Class frmMainAppWindow
         'txtBookID
         '
         Me.txtBookID.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.txtBookID.Location = New System.Drawing.Point(121, 21)
+        Me.txtBookID.Location = New System.Drawing.Point(112, 22)
         Me.txtBookID.Mask = "a00"
         Me.txtBookID.Name = "txtBookID"
         Me.txtBookID.Size = New System.Drawing.Size(81, 25)
@@ -1430,7 +1150,7 @@ Partial Class frmMainAppWindow
         'txtPubYear
         '
         Me.txtPubYear.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.txtPubYear.Location = New System.Drawing.Point(121, 115)
+        Me.txtPubYear.Location = New System.Drawing.Point(112, 116)
         Me.txtPubYear.Mask = "0000"
         Me.txtPubYear.Name = "txtPubYear"
         Me.txtPubYear.Size = New System.Drawing.Size(100, 25)
@@ -1452,28 +1172,6 @@ Partial Class frmMainAppWindow
         Me.btnUpdateEntry.TabIndex = 14
         Me.btnUpdateEntry.Text = "Update Entry"
         Me.btnUpdateEntry.UseVisualStyleBackColor = False
-        '
-        'TextBox9
-        '
-        Me.TextBox9.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox9.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.Location = New System.Drawing.Point(121, 146)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(64, 25)
-        Me.TextBox9.TabIndex = 12
-        Me.TextBox9.Text = "  5"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.BackColor = System.Drawing.Color.Transparent
-        Me.Label25.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(15, 148)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(68, 17)
-        Me.Label25.TabIndex = 13
-        Me.Label25.Text = "Stock No :"
         '
         'btnClearFields
         '
@@ -1512,7 +1210,7 @@ Partial Class frmMainAppWindow
         Me.Label24.AutoSize = True
         Me.Label24.BackColor = System.Drawing.Color.Transparent
         Me.Label24.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(15, 118)
+        Me.Label24.Location = New System.Drawing.Point(6, 119)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(40, 17)
         Me.Label24.TabIndex = 5
@@ -1523,7 +1221,7 @@ Partial Class frmMainAppWindow
         Me.txtAuthor.BackColor = System.Drawing.SystemColors.ControlLight
         Me.txtAuthor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAuthor.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAuthor.Location = New System.Drawing.Point(121, 84)
+        Me.txtAuthor.Location = New System.Drawing.Point(112, 85)
         Me.txtAuthor.Name = "txtAuthor"
         Me.txtAuthor.Size = New System.Drawing.Size(240, 25)
         Me.txtAuthor.TabIndex = 2
@@ -1532,7 +1230,7 @@ Partial Class frmMainAppWindow
         '
         Me.txtBookTitle.BackColor = System.Drawing.SystemColors.ControlLight
         Me.txtBookTitle.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBookTitle.Location = New System.Drawing.Point(121, 54)
+        Me.txtBookTitle.Location = New System.Drawing.Point(112, 55)
         Me.txtBookTitle.Name = "txtBookTitle"
         Me.txtBookTitle.Size = New System.Drawing.Size(240, 25)
         Me.txtBookTitle.TabIndex = 1
@@ -1542,7 +1240,7 @@ Partial Class frmMainAppWindow
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(15, 84)
+        Me.Label8.Location = New System.Drawing.Point(6, 85)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(68, 17)
         Me.Label8.TabIndex = 3
@@ -1553,7 +1251,7 @@ Partial Class frmMainAppWindow
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(15, 54)
+        Me.Label9.Location = New System.Drawing.Point(6, 55)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(72, 17)
         Me.Label9.TabIndex = 1
@@ -1564,7 +1262,7 @@ Partial Class frmMainAppWindow
         Me.Label23.AutoSize = True
         Me.Label23.BackColor = System.Drawing.Color.Transparent
         Me.Label23.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(15, 24)
+        Me.Label23.Location = New System.Drawing.Point(6, 25)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(52, 17)
         Me.Label23.TabIndex = 0
@@ -1575,12 +1273,10 @@ Partial Class frmMainAppWindow
         Me.tcTabNavContainer.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
         Me.tcTabNavContainer.Controls.Add(Me.tpRent)
         Me.tcTabNavContainer.Controls.Add(Me.tpReturn)
-        Me.tcTabNavContainer.Controls.Add(Me.tpAddBook)
         Me.tcTabNavContainer.Controls.Add(Me.tpCheckOut)
-        Me.tcTabNavContainer.Dock = System.Windows.Forms.DockStyle.Right
         Me.tcTabNavContainer.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.tcTabNavContainer.ItemSize = New System.Drawing.Size(0, 20)
-        Me.tcTabNavContainer.Location = New System.Drawing.Point(160, 24)
+        Me.tcTabNavContainer.ItemSize = New System.Drawing.Size(0, 10)
+        Me.tcTabNavContainer.Location = New System.Drawing.Point(158, 14)
         Me.tcTabNavContainer.Margin = New System.Windows.Forms.Padding(0)
         Me.tcTabNavContainer.Multiline = True
         Me.tcTabNavContainer.Name = "tcTabNavContainer"
@@ -1595,10 +1291,10 @@ Partial Class frmMainAppWindow
         Me.tpCheckOut.Controls.Add(Me.GroupBox11)
         Me.tpCheckOut.Controls.Add(Me.gbDenominations)
         Me.tpCheckOut.Controls.Add(Me.GroupBox10)
-        Me.tpCheckOut.Location = New System.Drawing.Point(4, 24)
+        Me.tpCheckOut.Location = New System.Drawing.Point(4, 14)
         Me.tpCheckOut.Name = "tpCheckOut"
         Me.tpCheckOut.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCheckOut.Size = New System.Drawing.Size(996, 602)
+        Me.tpCheckOut.Size = New System.Drawing.Size(996, 612)
         Me.tpCheckOut.TabIndex = 3
         Me.tpCheckOut.Text = "Check Out"
         '
@@ -1787,7 +1483,7 @@ Partial Class frmMainAppWindow
         Me.GroupBox10.Controls.Add(Me.Label32)
         Me.GroupBox10.Controls.Add(Me.lblCheckOutItems)
         Me.GroupBox10.Controls.Add(Me.btnEndTransaction)
-        Me.GroupBox10.Controls.Add(Me.Label31)
+        Me.GroupBox10.Controls.Add(Me.lblitemNumA)
         Me.GroupBox10.Controls.Add(Me.lblCheckOutBill)
         Me.GroupBox10.Controls.Add(Me.Label33)
         Me.GroupBox10.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
@@ -1887,16 +1583,16 @@ Partial Class frmMainAppWindow
         Me.btnEndTransaction.Text = "End Transaction"
         Me.btnEndTransaction.UseVisualStyleBackColor = False
         '
-        'Label31
+        'lblitemNumA
         '
-        Me.Label31.AutoSize = True
-        Me.Label31.BackColor = System.Drawing.Color.Transparent
-        Me.Label31.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(14, 67)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(87, 17)
-        Me.Label31.TabIndex = 10
-        Me.Label31.Text = "No. of Items :"
+        Me.lblitemNumA.AutoSize = True
+        Me.lblitemNumA.BackColor = System.Drawing.Color.Transparent
+        Me.lblitemNumA.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblitemNumA.Location = New System.Drawing.Point(14, 67)
+        Me.lblitemNumA.Name = "lblitemNumA"
+        Me.lblitemNumA.Size = New System.Drawing.Size(87, 17)
+        Me.lblitemNumA.TabIndex = 10
+        Me.lblitemNumA.Text = "No. of Items :"
         '
         'lblCheckOutBill
         '
@@ -1906,9 +1602,9 @@ Partial Class frmMainAppWindow
         Me.lblCheckOutBill.ForeColor = System.Drawing.Color.Orange
         Me.lblCheckOutBill.Location = New System.Drawing.Point(126, 94)
         Me.lblCheckOutBill.Name = "lblCheckOutBill"
-        Me.lblCheckOutBill.Size = New System.Drawing.Size(103, 30)
+        Me.lblCheckOutBill.Size = New System.Drawing.Size(22, 30)
         Me.lblCheckOutBill.TabIndex = 9
-        Me.lblCheckOutBill.Text = "RM 10.50"
+        Me.lblCheckOutBill.Text = "s"
         '
         'Label33
         '
@@ -1927,123 +1623,64 @@ Partial Class frmMainAppWindow
         Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.PrintToolStripButton, Me.toolStripSeparator, Me.CutToolStripButton, Me.CopyToolStripButton, Me.PasteToolStripButton, Me.toolStripSeparator1, Me.HelpToolStripButton})
-        Me.ToolStrip1.Location = New System.Drawing.Point(353, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(208, 25)
-        Me.ToolStrip1.TabIndex = 10
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'NewToolStripButton
-        '
-        Me.NewToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.NewToolStripButton.Image = CType(resources.GetObject("NewToolStripButton.Image"), System.Drawing.Image)
-        Me.NewToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.NewToolStripButton.Name = "NewToolStripButton"
-        Me.NewToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.NewToolStripButton.Text = "&New"
-        '
-        'OpenToolStripButton
-        '
-        Me.OpenToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.OpenToolStripButton.Image = CType(resources.GetObject("OpenToolStripButton.Image"), System.Drawing.Image)
-        Me.OpenToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.OpenToolStripButton.Name = "OpenToolStripButton"
-        Me.OpenToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.OpenToolStripButton.Text = "&Open"
-        '
-        'SaveToolStripButton
-        '
-        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
-        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SaveToolStripButton.Name = "SaveToolStripButton"
-        Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.SaveToolStripButton.Text = "&Save"
-        '
-        'PrintToolStripButton
-        '
-        Me.PrintToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PrintToolStripButton.Image = CType(resources.GetObject("PrintToolStripButton.Image"), System.Drawing.Image)
-        Me.PrintToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.PrintToolStripButton.Name = "PrintToolStripButton"
-        Me.PrintToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.PrintToolStripButton.Text = "&Print"
-        '
-        'toolStripSeparator
-        '
-        Me.toolStripSeparator.Name = "toolStripSeparator"
-        Me.toolStripSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'CutToolStripButton
-        '
-        Me.CutToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.CutToolStripButton.Image = CType(resources.GetObject("CutToolStripButton.Image"), System.Drawing.Image)
-        Me.CutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.CutToolStripButton.Name = "CutToolStripButton"
-        Me.CutToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.CutToolStripButton.Text = "C&ut"
-        '
-        'CopyToolStripButton
-        '
-        Me.CopyToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.CopyToolStripButton.Image = CType(resources.GetObject("CopyToolStripButton.Image"), System.Drawing.Image)
-        Me.CopyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.CopyToolStripButton.Name = "CopyToolStripButton"
-        Me.CopyToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.CopyToolStripButton.Text = "&Copy"
-        '
-        'PasteToolStripButton
-        '
-        Me.PasteToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PasteToolStripButton.Image = CType(resources.GetObject("PasteToolStripButton.Image"), System.Drawing.Image)
-        Me.PasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.PasteToolStripButton.Name = "PasteToolStripButton"
-        Me.PasteToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.PasteToolStripButton.Text = "&Paste"
-        '
-        'toolStripSeparator1
-        '
-        Me.toolStripSeparator1.Name = "toolStripSeparator1"
-        Me.toolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'HelpToolStripButton
-        '
-        Me.HelpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.HelpToolStripButton.Image = CType(resources.GetObject("HelpToolStripButton.Image"), System.Drawing.Image)
-        Me.HelpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.HelpToolStripButton.Name = "HelpToolStripButton"
-        Me.HelpToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.HelpToolStripButton.Text = "He&lp"
-        '
         'btnLogout
         '
         Me.btnLogout.BackColor = System.Drawing.Color.DimGray
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogout.Location = New System.Drawing.Point(1010, 0)
+        Me.btnLogout.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.Location = New System.Drawing.Point(967, 1)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(143, 24)
         Me.btnLogout.TabIndex = 11
         Me.btnLogout.Text = "Log Out"
         Me.btnLogout.UseVisualStyleBackColor = False
         '
+        'btnCloseApp
+        '
+        Me.btnCloseApp.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnCloseApp.FlatAppearance.BorderSize = 0
+        Me.btnCloseApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCloseApp.Font = New System.Drawing.Font("Segoe UI Black", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCloseApp.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnCloseApp.Location = New System.Drawing.Point(1111, 1)
+        Me.btnCloseApp.Name = "btnCloseApp"
+        Me.btnCloseApp.Size = New System.Drawing.Size(29, 24)
+        Me.btnCloseApp.TabIndex = 12
+        Me.btnCloseApp.Text = "X"
+        Me.btnCloseApp.UseVisualStyleBackColor = False
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
+        'lblTextBoxValidation
+        '
+        Me.lblTextBoxValidation.AutoSize = True
+        Me.lblTextBoxValidation.BackColor = System.Drawing.Color.Red
+        Me.lblTextBoxValidation.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lblTextBoxValidation.Location = New System.Drawing.Point(115, 193)
+        Me.lblTextBoxValidation.Name = "lblTextBoxValidation"
+        Me.lblTextBoxValidation.Size = New System.Drawing.Size(0, 17)
+        Me.lblTextBoxValidation.TabIndex = 18
+        '
         'frmMainAppWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1164, 654)
+        Me.ClientSize = New System.Drawing.Size(1140, 642)
+        Me.Controls.Add(Me.btnCloseApp)
         Me.Controls.Add(Me.btnLogout)
-        Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.tcTabNavContainer)
         Me.Controls.Add(Me.msTopMainMenu)
+        Me.Controls.Add(Me.tcTabNavContainer)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MainMenuStrip = Me.msTopMainMenu
         Me.MaximizeBox = False
@@ -2051,12 +1688,9 @@ Partial Class frmMainAppWindow
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "NavigationPaneTest"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.msTopMainMenu.ResumeLayout(False)
         Me.msTopMainMenu.PerformLayout()
-        Me.tpAddBook.ResumeLayout(False)
-        Me.GroupBox7.ResumeLayout(False)
-        Me.GroupBox7.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tpReturn.ResumeLayout(False)
         Me.gbFine.ResumeLayout(False)
         Me.gbFine.PerformLayout()
@@ -2083,25 +1717,20 @@ Partial Class frmMainAppWindow
         Me.gbDenominations.ResumeLayout(False)
         Me.GroupBox10.ResumeLayout(False)
         Me.GroupBox10.PerformLayout()
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents btnRent As Button
     Friend WithEvents btnReturn As Button
-    Friend WithEvents btnPlaceHolder1 As Button
     Friend WithEvents msTopMainMenu As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents tpAddBook As TabPage
     Friend WithEvents tpReturn As TabPage
     Friend WithEvents tpRent As TabPage
     Friend WithEvents tcTabNavContainer As TabControl
     Friend WithEvents LogOutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ImageList1 As ImageList
-    Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents txtAuthor As TextBox
     Friend WithEvents txtBookTitle As TextBox
@@ -2119,7 +1748,6 @@ Partial Class frmMainAppWindow
     Friend WithEvents dtpDueDate As DateTimePicker
     Friend WithEvents Label6 As Label
     Friend WithEvents btnIssueBook As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents dtpReturnDate As DateTimePicker
     Friend WithEvents Label11 As Label
@@ -2127,52 +1755,19 @@ Partial Class frmMainAppWindow
     Friend WithEvents dtpReturnRentDate As DateTimePicker
     Friend WithEvents Label7 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents cbBookCondition As ComboBox
-    Friend WithEvents Label12 As Label
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents txtReturnCustomerName As TextBox
     Friend WithEvents txtReturnCustomerNum As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents NewToolStripButton As ToolStripButton
-    Friend WithEvents OpenToolStripButton As ToolStripButton
-    Friend WithEvents SaveToolStripButton As ToolStripButton
-    Friend WithEvents PrintToolStripButton As ToolStripButton
-    Friend WithEvents toolStripSeparator As ToolStripSeparator
-    Friend WithEvents CutToolStripButton As ToolStripButton
-    Friend WithEvents CopyToolStripButton As ToolStripButton
-    Friend WithEvents PasteToolStripButton As ToolStripButton
-    Friend WithEvents toolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents HelpToolStripButton As ToolStripButton
     Friend WithEvents btnLogout As Button
     Friend WithEvents BookManagementToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddBookToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents dgvBookRentList_A As DataGridView
-    Friend WithEvents GroupBox7 As GroupBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents btnLogin As Button
-    Friend WithEvents btnSelectImage As Button
-    Friend WithEvents txtQuantity As TextBox
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents Label17 As Label
-    Friend WithEvents txtPublicationYear As TextBox
-    Friend WithEvents txtMarketPrice As TextBox
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label19 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label21 As Label
-    Friend WithEvents Label22 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents btnClearFields As Button
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents Label25 As Label
     Friend WithEvents btnUpdateEntry As Button
     Friend WithEvents txtBookID As MaskedTextBox
     Friend WithEvents txtPubYear As MaskedTextBox
@@ -2189,12 +1784,11 @@ Partial Class frmMainAppWindow
     Friend WithEvents cboRentPrice As ComboBox
     Friend WithEvents btnCheckout As Button
     Friend WithEvents lblNumItems As Label
-    Friend WithEvents lstbDebug As ListBox
     Friend WithEvents tpCheckOut As TabPage
     Friend WithEvents GroupBox10 As GroupBox
     Friend WithEvents lblCheckOutItems As Label
     Friend WithEvents btnEndTransaction As Button
-    Friend WithEvents Label31 As Label
+    Friend WithEvents lblitemNumA As Label
     Friend WithEvents lblCheckOutBill As Label
     Friend WithEvents Label33 As Label
     Friend WithEvents rtxtReceipt As RichTextBox
@@ -2215,13 +1809,12 @@ Partial Class frmMainAppWindow
     Friend WithEvents GroupBox11 As GroupBox
     Friend WithEvents LoadDataToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveDataToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents lstCartList As ListBox
+    Friend WithEvents lstRentCartList As ListBox
     Friend WithEvents gbFine As GroupBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnReturnCheckout As Button
     Friend WithEvents lblSelectedFine As Label
     Friend WithEvents Label37 As Label
     Friend WithEvents txtReturnBookID As MaskedTextBox
-    Friend WithEvents ListBox1 As ListBox
     Friend WithEvents dgvBookRentList_B As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
@@ -2245,4 +1838,14 @@ Partial Class frmMainAppWindow
     Friend WithEvents Label14 As Label
     Friend WithEvents lblTotalFine As Label
     Friend WithEvents Label28 As Label
+    Friend WithEvents lblReturnStatus As Label
+    Friend WithEvents btnCloseApp As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents lstReturnCartList As ListBox
+    Friend WithEvents OpenDatabaseFileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Label1 As Label
+    Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents lblTextBoxValidation As Label
 End Class
